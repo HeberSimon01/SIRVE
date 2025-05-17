@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -135,8 +138,16 @@ public class Loguear extends javax.swing.JFrame {
     }//GEN-LAST:event_PaswordActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Principal Principal = new Principal();
-        Principal.setVisible(true);
+    String usuario = User.getText();
+    String contrasena = Pasword.getText();
+
+    if (usuario.equals("admin") && contrasena.equals("1234")) {
+        Principal principal = new Principal();
+        principal.setVisible(true);
+        this.dispose(); // cerrar la ventana actual
+    } else {
+        JOptionPane.showMessageDialog(this, "Credenciales incorrectas.");
+    }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
