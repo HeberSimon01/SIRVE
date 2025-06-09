@@ -1,67 +1,82 @@
-import java.util.List;
+// ABB.java
 import java.util.ArrayList;
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author User
- */
-public class ABB {
+import java.util.List;
+public class ABB { // Renombrado de ArbolABB a ABB
     private NodoABB raiz;
+    private int nextId = 1; // Para generar IDs únicos automáticamente
 
-    public void insertar(Multa multa) {
-        raiz = insertarRec(raiz, multa);
+    public ABB() { // Constructor renombrado
+        this.raiz = null;
     }
-
-    private NodoABB insertarRec(NodoABB nodo, Multa multa) {
-        if (nodo == null) return new NodoABB(multa);
-        int cmp = multa.getPlaca().compareTo(nodo.multa.getPlaca());
-        if (cmp < 0) nodo.izq = insertarRec(nodo.izq, multa);
-        else nodo.der = insertarRec(nodo.der, multa);
-        return nodo;
+    // Método para insertar un vehículo en el ABB
+    public void insertar(Vehiculo vehiculo) {
+        vehiculo.setId(nextId++); // Asignar ID único
+        this.raiz = insertarRecursivo(this.raiz, vehiculo);
     }
-        // Método para buscar todas las multas con una placa específica
-    public List<Multa> buscarPorPlaca(String placa) {
-        List<Multa> resultado = new ArrayList<>();
-        buscarPorPlacaRec(raiz, placa, resultado);
-        return resultado;
-    }
-
-    private void buscarPorPlacaRec(NodoABB nodo, String placa, List<Multa> resultado) {
-        if (nodo == null) {
-            return;
+    private NodoABB insertarRecursivo(NodoABB actual, Vehiculo vehiculo) {
+        if (actual == null) {
+            return new NodoABB(vehiculo);
         }
-        int cmp = placa.compareTo(nodo.multa.getPlaca());
-
-        if (cmp == 0) {
-            resultado.add(nodo.multa);
-            // Aunque sea ABB, puede haber duplicados en ambos lados si usas igual a la derecha
-            // Por eso seguimos buscando en ambos subárboles:
-            buscarPorPlacaRec(nodo.izq, placa, resultado);
-            buscarPorPlacaRec(nodo.der, placa, resultado);
-        } else if (cmp < 0) {
-            buscarPorPlacaRec(nodo.izq, placa, resultado);
+        int comparacion = vehiculo.compareTo(actual.vehiculo);
+        if (comparacion < 0) {
+            actual.izquierda = insertarRecursivo(actual.izquierda, vehiculo);
+        } else if (comparacion > 0) {
+            actual.derecha = insertarRecursivo(actual.derecha, vehiculo);
         } else {
-            buscarPorPlacaRec(nodo.der, placa, resultado);
+            // Manejar duplicados si es necesario (ej: no insertar o actualizar)
+            System.out.println("Vehículo con placa duplicada: " + vehiculo.getPlaca());
         }
+        return actual;
     }
-
-    public List<Multa> inorden() {
-        List<Multa> lista = new ArrayList<>();
-        inordenRec(raiz, lista);
-        return lista;
+    // Método para obtener todos los vehículos ordenados (recorrido inorden)
+    public List<Vehiculo> obtenerVehiculosOrdenados() {
+        List<Vehiculo> listaVehiculos = new ArrayList<>();
+        inorden(raiz, listaVehiculos);
+        return listaVehiculos;
     }
-
-    private void inordenRec(NodoABB nodo, List<Multa> lista) {
+    private void inorden(NodoABB nodo, List<Vehiculo> lista) {
         if (nodo != null) {
-            inordenRec(nodo.izq, lista);
-            lista.add(nodo.multa);
-            inordenRec(nodo.der, lista);
+            inorden(nodo.izquierda, lista);
+            lista.add(nodo.vehiculo);
+            inorden(nodo.derecha, lista);
         }
     }
+    // Método para obtener vehículos filtrados por departamento
+    public List<Vehiculo> obtenerVehiculosPorDepartamento(String departamento) {
+        List<Vehiculo> listaFiltrada = new ArrayList<>();
+        inordenFiltrado(raiz, listaFiltrada, departamento);
+        return listaFiltrada;
+    }
+    private void inordenFiltrado(NodoABB nodo, List<Vehiculo> lista, String departamento) {
+        if (nodo != null) {
+            inordenFiltrado(nodo.izquierda, lista, departamento);
+            if (nodo.vehiculo.getDepartamento().equalsIgnoreCase(departamento)) {
+                lista.add(nodo.vehiculo);
+            }
+            inordenFiltrado(nodo.derecha, lista, departamento);
+        }
+    }
+    // Método para resetear el árbol y los IDs (útil si se carga un nuevo set de datos)
+    public void reset() {
+        this.raiz = null;
+        this.nextId = 1;
+    }
+    public Vehiculo buscarPorPlaca(String placa) {
+    return buscarPorPlacaRecursivo(raiz, placa);
+}
 
+private Vehiculo buscarPorPlacaRecursivo(NodoABB actual, String placa) {
+    
+    if (actual == null) {
+        return null; // No se encontró el vehículo
+    }
+    int comparacion = placa.compareTo(actual.vehiculo.getPlaca());
+    if (comparacion < 0) {
+        return buscarPorPlacaRecursivo(actual.izquierda, placa);
+    } else if (comparacion > 0) {
+        return buscarPorPlacaRecursivo(actual.derecha, placa);
+    } else {
+        return actual.vehiculo; // Se encontró el vehículo
+    }
+}
 }

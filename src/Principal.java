@@ -1,4 +1,5 @@
 
+import java.awt.event.ActionEvent;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -12,7 +13,16 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Vector;
+import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.RowFilter;
+import javax.swing.table.TableRowSorter;
 
 
 /*
@@ -26,9 +36,22 @@ import javax.swing.JComboBox;
  */
 
 public class Principal extends javax.swing.JFrame {
-
+    private Map<String, String> archivosVehiculosPorDepto;
+    private List<Vector<String>> allTableData; // <<-- DECLARAR ESTA AQUÍ
+        private ABB arbolABB; // Instancia de tu árbol ABB
+        
+    private JTextField txtPlacaBuscar; // Para que el usuario ingrese la placa
+    private JButton btnBuscar; // Botón para iniciar la búsqueda
+    private JTextArea areaResultadoBusqueda; 
       public Principal() {
+              txtPlacaBuscar = new JTextField(15);
+    btnBuscar = new JButton("Buscar Vehículo por Placa");
+    areaResultadoBusqueda = new JTextArea(5, 30); // O un JLabel, o actualizar la JTable
+    areaResultadoBusqueda.setEditable(false);
+    
         initComponents();
+        
+       
     inicializarTabla(); 
     // Configurar JComboBox
     Depto.addItem("Todos"); // Opción para ver todos los departamentos
@@ -40,7 +63,10 @@ private ABB arbolVehiculos = new ABB(); // Cambiado a ABB
 private DefaultTableModel tablaModelo;
 private Set<String> departamentosCargados = new HashSet<>(); // Para el JComboBox
 
-    
+
+
+
+
 private void inicializarTabla() {
     // Columnas de la tabla (SIN Departamento)
     String[] columnas = {"ID", "Placa", "DPI", "Nombre", "Marca", "Modelo", "Año", "Multas", "Traspasos"};
@@ -123,6 +149,26 @@ private void mostrarDatosEnTabla(List<Vehiculo> listaVehiculos) {
         tablaModelo.addRow(fila);
     }
 }
+private void actualizarTablaConVehiculo(Vehiculo vehiculo) {
+    tablaModelo.setRowCount(0); // Limpiar todas las filas de la tabla
+
+    // Añadir solo el vehículo encontrado
+    Object[] rowData = {
+        vehiculo.getId(), // Asegúrate de que Vehiculo tenga un getId() si lo usas
+        vehiculo.getPlaca(),
+        vehiculo.getDpi(),
+        vehiculo.getNombre(),
+        vehiculo.getMarca(),
+        vehiculo.getModelo(),
+        vehiculo.getAño(),
+        vehiculo.getMultas(),
+        vehiculo.getTraspasos(),
+        vehiculo.getDepartamento()
+    };
+    tablaModelo.addRow(rowData);
+}
+
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -143,8 +189,9 @@ private void mostrarDatosEnTabla(List<Vehiculo> listaVehiculos) {
         Depto = new javax.swing.JComboBox<>();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextAreaMensajes = new javax.swing.JTextArea();
-        Buscar = new javax.swing.JTextField();
+        BBuscar = new javax.swing.JTextField();
         Buscador = new javax.swing.JButton();
+        Eliminar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -202,9 +249,25 @@ private void mostrarDatosEnTabla(List<Vehiculo> listaVehiculos) {
         jTextAreaMensajes.setRows(5);
         jScrollPane2.setViewportView(jTextAreaMensajes);
 
-        Buscar.setText("Placa a buscar");
+        BBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BBuscarActionPerformed(evt);
+            }
+        });
 
         Buscador.setText("b");
+        Buscador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BuscadorActionPerformed(evt);
+            }
+        });
+
+        Eliminar.setText("X");
+        Eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PrinLayout = new javax.swing.GroupLayout(Prin);
         Prin.setLayout(PrinLayout);
@@ -232,10 +295,12 @@ private void mostrarDatosEnTabla(List<Vehiculo> listaVehiculos) {
                 .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ABB)
                     .addGroup(PrinLayout.createSequentialGroup()
-                        .addComponent(Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Buscador, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(BBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Eliminar)
+                            .addComponent(Buscador, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         PrinLayout.setVerticalGroup(
             PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -257,8 +322,10 @@ private void mostrarDatosEnTabla(List<Vehiculo> listaVehiculos) {
                         .addComponent(ABB)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Buscador))))
+                            .addComponent(BBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Buscador))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Eliminar)))
                 .addGap(545, 545, 545))
         );
 
@@ -340,6 +407,25 @@ private void jComboBoxDepartamentosItemStateChanged(java.awt.event.ItemEvent evt
 
     }//GEN-LAST:event_DeptoActionPerformed
 
+    private void BuscadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscadorActionPerformed
+    String placaBuscar = BBuscar.getText(); // Obtener el texto ingresado
+    DefaultTableModel model = (DefaultTableModel) Tabla.getModel(); // Obtener el modelo del JTable
+    TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
+    
+    Tabla.setRowSorter(sorter); // Establecer el sorter en la tabla
+    
+    // Filtrar las filas que no coincidan con la placa ingresada
+    sorter.setRowFilter(RowFilter.regexFilter(placaBuscar)); 
+    }//GEN-LAST:event_BuscadorActionPerformed
+
+    private void BBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BBuscarActionPerformed
+    
+    }//GEN-LAST:event_BBuscarActionPerformed
+
+    private void EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarActionPerformed
+
+    }//GEN-LAST:event_EliminarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -347,10 +433,11 @@ private void jComboBoxDepartamentosItemStateChanged(java.awt.event.ItemEvent evt
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ABB;
+    private javax.swing.JTextField BBuscar;
     private javax.swing.JButton Buscador;
-    private javax.swing.JTextField Buscar;
     private javax.swing.JButton Carga;
     private javax.swing.JComboBox<String> Depto;
+    private javax.swing.JButton Eliminar;
     private javax.swing.JPanel Prin;
     private javax.swing.JTable Tabla;
     private javax.swing.JLabel jLabel1;

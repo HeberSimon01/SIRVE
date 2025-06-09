@@ -11,12 +11,16 @@ import javax.swing.JFileChooser;
  *
  * @author User
  */
+// NodoABB.java
+// NodoABB.java
 public class NodoABB {
+    Vehiculo vehiculo;
+    NodoABB izquierda;
+    NodoABB derecha;
 
-    public Multa multa;
-    public NodoABB izq, der;
-
-    public NodoABB(Multa multa) {
-        this.multa = multa;
+    public NodoABB(Vehiculo vehiculo) {
+        this.vehiculo = vehiculo;
+        this.izquierda = null;
+        this.derecha = null;
     }
 }
