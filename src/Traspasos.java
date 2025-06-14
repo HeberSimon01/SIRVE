@@ -43,11 +43,7 @@ private CryptoUtil cryptoUtil;
         Tabla3.setModel(modeloTabla); // Asigna el modelo a la tabla
 
         cryptoUtil = new CryptoUtil(); // Inicializa la utilidad de cifrado
-        // Opcional: para persistir la clave, aquí la cargarías si existiera.
-        // String storedKey = // ... cargar clave de algún lugar seguro ...
-        // if (storedKey != null) {
-        //     CryptoUtil.setSecretKey(storedKey);
-        // }
+
     }
         public void agregarNuevoTraspaso(Traspaso nuevo) {
         listaTraspasos.agregar(nuevo); // Agregar el nuevo traspaso a la lista
@@ -255,7 +251,6 @@ public void mostrarMensaje(String mensaje) {
         Modificar = new javax.swing.JButton();
         CargaT = new javax.swing.JButton();
         Salir = new javax.swing.JButton();
-        Encriptar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -276,6 +271,7 @@ public void mostrarMensaje(String mensaje) {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/check.png"))); // NOI18N
         jLabel1.setText("Gestor de Traspasos SIRVE");
 
+        Buscador.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         Buscador.setText("Busacar");
         Buscador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -287,6 +283,7 @@ public void mostrarMensaje(String mensaje) {
         TextM.setRows(5);
         jScrollPane2.setViewportView(TextM);
 
+        Eliminador.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         Eliminador.setText("Elimiar");
         Eliminador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -294,6 +291,7 @@ public void mostrarMensaje(String mensaje) {
             }
         });
 
+        Ingreso.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         Ingreso.setText("Ingresar");
         Ingreso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -301,6 +299,7 @@ public void mostrarMensaje(String mensaje) {
             }
         });
 
+        Modificar.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         Modificar.setText("Modificar");
         Modificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -308,6 +307,8 @@ public void mostrarMensaje(String mensaje) {
             }
         });
 
+        CargaT.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        CargaT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/carpeta.png"))); // NOI18N
         CargaT.setText("Carga");
         CargaT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -315,17 +316,11 @@ public void mostrarMensaje(String mensaje) {
             }
         });
 
+        Salir.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         Salir.setText("Salir");
         Salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SalirActionPerformed(evt);
-            }
-        });
-
-        Encriptar.setText("Encriptar");
-        Encriptar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EncriptarActionPerformed(evt);
             }
         });
 
@@ -334,66 +329,57 @@ public void mostrarMensaje(String mensaje) {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 815, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(Bus, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(Buscador)
-                        .addGap(51, 51, 51)
-                        .addComponent(Eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(Eliminador)
-                        .addGap(58, 58, 58)
-                        .addComponent(Ingreso)
-                        .addGap(50, 50, 50)
-                        .addComponent(Mod, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(Modificar)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(45, 45, 45)
+                .addComponent(Bus, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Buscador)
+                .addGap(51, 51, 51)
+                .addComponent(Eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Eliminador)
+                .addGap(58, 58, 58)
+                .addComponent(Ingreso)
+                .addGap(50, 50, 50)
+                .addComponent(Mod, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Modificar)
+                .addContainerGap(310, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(CargaT)
                 .addGap(141, 141, 141)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(Salir)
-                        .addGap(29, 29, 29))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(Encriptar)
-                        .addGap(76, 76, 76))))
+                .addComponent(Salir)
+                .addGap(29, 29, 29))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jScrollPane1)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(CargaT)
-                        .addGap(7, 7, 7))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(CargaT)
+                                .addGap(7, 7, 7))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(Salir)
-                                .addGap(68, 68, 68)
-                                .addComponent(Encriptar))
-                            .addComponent(jLabel1))
-                        .addGap(18, 18, 18)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGap(17, 17, 17)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Salir)
+                                    .addComponent(jLabel1))
+                                .addGap(18, 18, 18)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(102, 102, 102)))
+                        .addGap(235, 235, 235)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Bus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Buscador)
@@ -420,11 +406,10 @@ public void mostrarMensaje(String mensaje) {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CargaTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CargaTActionPerformed
-    // Medir el tiempo de carga
+
     long startTime = System.currentTimeMillis();
     // Llamar a la función que carga traspasos desde carpeta
     cargarTraspasosDesdeCarpeta();
-    // Calcular duración en segundos
     long endTime = System.currentTimeMillis();
     double durationInSeconds = (endTime - startTime) / 1000.0;
     // Mostrar duración en el JTextArea TextM
@@ -462,18 +447,12 @@ eliminarPorId();
                 return;
             }
 
-            // Aquí se pasa el objeto 'traspaso' directamente a la ventana de ingreso
-            // sin realizar ninguna operación de encriptación/desencriptación previa.
             IngresoT ingresarFrame = new IngresoT(this, traspaso);
             ingresarFrame.setVisible(true);
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(this, "Ingrese un ID válido.", "ID Inválido", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_ModificarActionPerformed
-
-    private void EncriptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EncriptarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EncriptarActionPerformed
 
 
 
@@ -483,7 +462,6 @@ eliminarPorId();
     private javax.swing.JButton CargaT;
     private javax.swing.JButton Eliminador;
     private javax.swing.JTextField Eliminar;
-    private javax.swing.JButton Encriptar;
     private javax.swing.JButton Ingreso;
     private javax.swing.JTextField Mod;
     private javax.swing.JButton Modificar;
