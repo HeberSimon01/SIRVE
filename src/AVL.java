@@ -296,4 +296,34 @@ public class AVL {
             dot.append("    ").append(nodo.vehiculo.getPlaca().replace("-", "_")).append(" -> null_r").append(nodo.vehiculo.getPlaca().replace("-", "_")).append(";\n");
         }
     }
+    // Método para obtener vehículos en preorden
+public List<Vehiculo> obtenerVehiculosPreOrden() {
+    List<Vehiculo> listaVehiculos = new ArrayList<>();
+    preordenTraversal(raiz, listaVehiculos);
+    return listaVehiculos;
+}
+
+private void preordenTraversal(NodoAVL nodo, List<Vehiculo> lista) {
+    if (nodo != null) {
+        lista.add(nodo.vehiculo);
+        preordenTraversal(nodo.izquierda, lista);
+        preordenTraversal(nodo.derecha, lista);
+    }
+}
+
+// Método para obtener vehículos en posorden
+public List<Vehiculo> obtenerVehiculosPosOrden() {
+    List<Vehiculo> listaVehiculos = new ArrayList<>();
+    posordenTraversal(raiz, listaVehiculos);
+    return listaVehiculos;
+}
+
+private void posordenTraversal(NodoAVL nodo, List<Vehiculo> lista) {
+    if (nodo != null) {
+        posordenTraversal(nodo.izquierda, lista);
+        posordenTraversal(nodo.derecha, lista);
+        lista.add(nodo.vehiculo);
+    }
+}
+
 }

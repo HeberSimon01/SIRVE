@@ -141,7 +141,7 @@ public class Loguear extends javax.swing.JFrame {
     String usuario = User.getText();
     String contrasena = Pasword.getText();
 
-    if (usuario.equals("admin") && contrasena.equals("1234")) {
+    if (usuario.equals("Admin") && contrasena.equals("12345")) {
         Principal principal = new Principal();
         principal.setVisible(true);
         this.dispose(); // cerrar la ventana actual

@@ -291,5 +291,31 @@ generarEnlacesDotLimitado(raiz, dot, idsVisualizados);
             dot.append("    \"node").append(nodo.vehiculo.getId()).append("\" -> \"nullR").append(nodo.vehiculo.getId()).append("\" [label=\"R\", arrowhead=none];\n");
         }
     }
+    // Método para obtener vehículos en preorden
+public List<Vehiculo> obtenerVehiculosPreOrden() {
+    List<Vehiculo> listaVehiculos = new ArrayList<>();
+    preorden(raiz, listaVehiculos);
+    return listaVehiculos;
+}
+private void preorden(NodoABB nodo, List<Vehiculo> lista) {
+    if (nodo != null) {
+        lista.add(nodo.vehiculo);
+        preorden(nodo.izquierda, lista);
+        preorden(nodo.derecha, lista);
+    }
+}
+// Método para obtener vehículos en posorden
+public List<Vehiculo> obtenerVehiculosPosOrden() {
+    List<Vehiculo> listaVehiculos = new ArrayList<>();
+    posorden(raiz, listaVehiculos);
+    return listaVehiculos;
+}
+private void posorden(NodoABB nodo, List<Vehiculo> lista) {
+    if (nodo != null) {
+        posorden(nodo.izquierda, lista);
+        posorden(nodo.derecha, lista);
+        lista.add(nodo.vehiculo);
+    }
+}
 
 }

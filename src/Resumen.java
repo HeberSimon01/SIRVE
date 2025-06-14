@@ -8,9 +8,6 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-import javax.swing.filechooser.FileNameExtensionFilter;
-import java.time.LocalDate; // Necesario para la fecha de Multa y Traspaso
-import java.time.format.DateTimeParseException; // Para manejar errores de formato de fecha
 
 public class Resumen extends javax.swing.JFrame {
 
@@ -92,8 +89,6 @@ public class Resumen extends javax.swing.JFrame {
                         String descripcion = parts[2].trim();
                         double monto = Double.parseDouble(parts[3].trim());
 
-                        // Inferir departamento del nombre del archivo (similar a cómo lo haces en Vehiculo)
-                        // Si el archivo se llama "Antigua_Guatemala_multas.txt", el departamento sería "Antigua Guatemala"
                         String departamento = file.getName().replace("_multas.txt", "");
                         departamento = departamento.replace("_", " ");
 
@@ -281,6 +276,8 @@ public class Resumen extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(102, 0, 255));
 
+        SeleccionarCarpeta.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        SeleccionarCarpeta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/carpeta.png"))); // NOI18N
         SeleccionarCarpeta.setText("Carga");
         SeleccionarCarpeta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -310,7 +307,7 @@ public class Resumen extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 525, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Salir)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

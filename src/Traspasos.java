@@ -26,7 +26,6 @@ public class Traspasos extends javax.swing.JFrame {
     private DefaultTableModel modeloTabla;
     public ListaTraspasos<Traspaso> listaTraspasos;
      private JTextArea textM;
-private CryptoUtil cryptoUtil;
 
     public JTextArea getTextM() {
         return TextM;
@@ -41,8 +40,6 @@ private CryptoUtil cryptoUtil;
             "ID", "PLACA", "DPI ant", "NOMBRE ant", "FECHA", "DPI", "NOMBRE", "DEPARTAMENTO", "ENCRIPTADO" // Nueva columna
         });
         Tabla3.setModel(modeloTabla); // Asigna el modelo a la tabla
-
-        cryptoUtil = new CryptoUtil(); // Inicializa la utilidad de cifrado
 
     }
         public void agregarNuevoTraspaso(Traspaso nuevo) {

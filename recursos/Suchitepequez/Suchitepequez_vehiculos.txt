@@ -1,2 +1,2 @@
 20004,AAA-9212,5251434637203,Francisco Jose Escrivá Canals,Honda,Civic,2023,3,4,Suchitepequez
-20004,AAA-0000,1321354,SDF,SDF,2026,2026,2,1,Suchitepequez
+20006,AAA-9212,5251434637203,Francisco Jose Escrivá Canals,Honda,Civic,2023,3,3,Suchitepequez

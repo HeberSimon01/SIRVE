@@ -9,13 +9,9 @@ import java.util.List;
 import java.util.Set;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
@@ -45,18 +41,14 @@ public class Principal extends javax.swing.JFrame {
     private int nextGlobalId = 1; // Para IDs únicos y generados automáticamente
     private Set<String> departamentosCargados; // Para gestionar los departamentos en el ComboBox
 
-    // Componentes UI: DECLARAR TODOS AQUÍ (no dentro de métodos)
-    // Componentes de JTable y sus modelos
+
 
     private DefaultTableModel tablaModelo;    // Modelo para Tabla
     private DefaultTableModel tablaModelo1;   // Modelo para Tabla1
-
-    // Campos de texto y botones generales (si son parte de tu GUI)
     private javax.swing.JTextField txtPlacaBuscar; // Para buscar en ABB
     private javax.swing.JButton btnBuscar;       // Botón de búsqueda (general o ABB)
     private javax.swing.JTextArea areaResultadoBusqueda; // Área de resultados (general o ABB)
 
-    // Constantes
     private static final String[] ARCHIVOS_DEPARTAMENTOS = {
         "Antigua_Guatemala_vehiculos.txt", "Chimaltenango_vehiculos.txt", "Escuintla_vehiculos.txt",
         "Guatemala_vehiculos.txt", "Huehuetenango_vehiculos.txt", "Peten_vehiculos.txt",
@@ -90,12 +82,10 @@ btnAgregarAVL.addActionListener(new java.awt.event.ActionListener() {
         btnAgregarAVLActionPerformed(evt); // Este método llamará a agregarVehiculoAVL()
     }
 });
-
         // Inicializar el conjunto de departamentos cargados
         departamentosCargados = new HashSet<>();
 
         // Inicializar los modelos de tabla DESPUÉS de initComponents()
-        // (ya que initComponents() crea los JTables, y luego podemos obtener sus modelos)
         tablaModelo = (DefaultTableModel) Tabla.getModel();
         tablaModelo1 = (DefaultTableModel) Tabla1.getModel();
 
@@ -111,7 +101,7 @@ btnAgregarAVL.addActionListener(new java.awt.event.ActionListener() {
         Tabla1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
         // Inicialización de componentes UI que quizás no maneja initComponents() o que quieres controlar
-        // Si ya están en initComponents(), estas líneas son redundantes.
+
         if (txtPlacaBuscar == null) txtPlacaBuscar = new JTextField(15);
         if (btnBuscar == null) btnBuscar = new JButton("Buscar Vehículo por Placa");
         if (areaResultadoBusqueda == null) areaResultadoBusqueda = new JTextArea(5, 30);
@@ -146,9 +136,6 @@ private void configurarTabla(javax.swing.JTable tabla) {
     tabla.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION); // Allow only single row selection
 }
 
-
-
-    // Este método es LLAMADO DESDE LA CLASE AGREGAR (por eso debe ser public)
 // Este método es LLAMADO DESDE TU JDialog 'Agregar' (por eso es public)
 public void agregarVehiculoDesdeVentana(Vehiculo vehiculo, String departamento) {
     long startTime = System.nanoTime(); // Inicia el temporizador al principio del método
@@ -207,11 +194,7 @@ public void agregarVehiculoDesdeVentana(Vehiculo vehiculo, String departamento) 
 }
     
     // Método auxiliar para obtener la ruta base de las carpetas de departamentos
-    // ¡¡¡IMPORTANTE!!! AJUSTA ESTA RUTA A LA UBICACIÓN REAL DE TUS ARCHIVOS
         private String obtenerRutaBaseDepartamentos() {
-            // Por ejemplo:
-            // return "C:" + File.separator + "MisDatosVehiculos"; 
-            // return System.getProperty("user.dir") + File.separator + "data"; // Si tus datos están en una carpeta 'data' en el directorio del proyecto
             return "recursos"; // Ruta relativa, asumiendo que tus carpetas de departamentos están dentro de una carpeta 'recursos' en tu proyecto.
         }
 
@@ -219,11 +202,10 @@ public void agregarVehiculoDesdeVentana(Vehiculo vehiculo, String departamento) 
         // Método para guardar un solo vehículo en su archivo correspondiente
     public void guardarVehiculoEnArchivo(Vehiculo vehiculo, String rutaArchivo) {
         try {
-        // 1. Get the parent directory path from the file path
+
         File archivo = new File(rutaArchivo);
         File directorioPadre = archivo.getParentFile(); // Gets "recursos\Antigua_Guatemala" for example
 
-        // 2. Check if the parent directory exists, if not, create it
         if (!directorioPadre.exists()) {
             if (directorioPadre.mkdirs()) { // mkdirs() creates all necessary but nonexistent parent directories
                 System.out.println("DEBUG: Directorio creado: " + directorioPadre.getAbsolutePath());
@@ -234,7 +216,6 @@ public void agregarVehiculoDesdeVentana(Vehiculo vehiculo, String departamento) 
             }
         }
 
-        // 3. Now that the directory is guaranteed to exist, proceed with writing the file
         try (FileWriter writer = new FileWriter(rutaArchivo, true)) { // 'true' for append mode
             // Format your vehicle data as a single line string
             String lineaVehiculo = vehiculo.getId() + "," +
@@ -264,16 +245,13 @@ public void agregarVehiculoDesdeVentana(Vehiculo vehiculo, String departamento) 
         }
         return "Todos"; // Valor por defecto si no hay nada seleccionado
     }
-    
-    // Método para reescribir un archivo completo de un departamento
+
     // Se usa después de eliminar un vehículo para reflejar el cambio en el archivo.
 private void reescribirArchivoVehiculos(String departamento) {
     String rutaCarpetaDepartamentos = obtenerRutaBaseDepartamentos();
     String rutaArchivoCompleta = rutaCarpetaDepartamentos + File.separator + departamento + File.separator + departamento + "_vehiculos.txt";
 
-
     List<Vehiculo> vehiculosDelDepartamento = arbolABB.obtenerVehiculosPorDepartamento(departamento);
-
 
     long startTimeEscritura = System.nanoTime(); // Inicia el temporizador para la operación de escritura
 
@@ -332,8 +310,7 @@ private void actualizarTabla(List<Vehiculo> vehiculos, javax.swing.JTable tabla)
     }
 }
 
-    // Este método muestra en la tabla la lista de vehículos que se le pase
-    // Se usa para filtrado (por departamento) o para mostrar el resultado de una búsqueda.
+    // Este método muestra en la tabla la lista de vehículos que se le pase.
     private void mostrarDatosEnTabla(List<Vehiculo> listaVehiculos) {
         tablaModelo.setRowCount(0); // Limpiar todas las filas existentes en la tabla
 
@@ -353,18 +330,17 @@ private void actualizarTabla(List<Vehiculo> vehiculos, javax.swing.JTable tabla)
             tablaModelo.addRow(fila);
         }
     }
-// Este método carga vehículos desde un archivo de texto para un departamento específico
-private void cargarVehiculosDesdeArchivo(String rutaArchivo, String departamento) {
+
+    private void cargarVehiculosDesdeArchivo(String rutaArchivo, String departamento) {
     try (BufferedReader br = new BufferedReader(new FileReader(rutaArchivo))) {
         String line;
         br.readLine(); // Saltar la línea de encabezado (e.g., "Placa,DPI,Nombre,...")
         while ((line = br.readLine()) != null) {
             String[] parts = line.split(",");
-            // Ajusta 'parts.length == 8' según el número exacto de campos en tus archivos.
-            // Si tu archivo no incluye el ID ni el Departamento (que se manejan por separado aquí),
-            // entonces si tiene 8 campos (Placa,DPI,Nombre,Marca,Modelo,Año,Multas,Traspasos) esto es correcto.
+
             if (parts.length == 8) {
                 try {
+                    // Cargar los campos String sin encriptar
                     String placa = parts[0].trim().toUpperCase();
                     String dpi = parts[1].trim();
                     String nombre = parts[2].trim();
@@ -374,13 +350,28 @@ private void cargarVehiculosDesdeArchivo(String rutaArchivo, String departamento
                     int multas = Integer.parseInt(parts[6].trim());
                     int traspasos = Integer.parseInt(parts[7].trim());
 
-                    // ¡Crea el objeto Vehiculo. Usa nextGlobalId para generar el ID automáticamente!
-                    // This is where the ID is generated and incremented.
+                    // Crear el objeto Vehiculo sin encriptar
                     Vehiculo vehiculo = new Vehiculo(nextGlobalId++, placa, dpi, nombre, marca, modelo, año, multas, traspasos, departamento);
 
-                    // Inserta el vehículo en ambos árboles
+                    // Medir tiempo de inserción en ABB
+                    long startTimeABB = System.nanoTime();
                     arbolABB.insertar(vehiculo);
+                    long endTimeABB = System.nanoTime();
+                    double durationABB = (endTimeABB - startTimeABB) / 1_000_000_000.0;
+
+                    // Medir tiempo de inserción en AVL
+                    long startTimeAVL = System.nanoTime();
                     arbolAVL.insertar(vehiculo);
+                    long endTimeAVL = System.nanoTime();
+                    double durationAVL = (endTimeAVL - startTimeAVL) / 1_000_000_000.0;
+
+                    // Mostrar los tiempos en jTextAreaMensajes
+                    jTextAreaMensajes.append(String.format(
+                        "Vehículo con placa '%s' insertado en ABB en %.6f segundos.%n",
+                        placa, durationABB));
+                    jTextAreaMensajes.append(String.format(
+                        "Vehículo con placa '%s' insertado en AVL en %.6f segundos.%n",
+                        placa, durationAVL));
 
                 } catch (NumberFormatException ex) {
                     jTextAreaMensajes.append("Error de formato numérico en línea: '" + line + "' en archivo " + rutaArchivo + ": " + ex.getMessage() + "\n");
@@ -394,6 +385,8 @@ private void cargarVehiculosDesdeArchivo(String rutaArchivo, String departamento
         jTextAreaMensajes.append("Error al leer archivo " + rutaArchivo + ": " + ex.getMessage() + "\n");
     }
 }
+
+
 private void escribirVehiculosAArchivo(List<Vehiculo> vehiculos, String rutaArchivo) throws IOException {
     File file = new File(rutaArchivo);
     File parentDir = file.getParentFile();
@@ -486,9 +479,7 @@ private void cargarDatosDesdeCarpeta(File carpetaRaiz) {
 
     if (vehiculoEncontrado != null) {
         jTextAreaMensajes.append("Vehículo Encontrado:\n" + vehiculoEncontrado.toString() + "\n"); // Usa append
-        // Muestra SOLO el vehículo encontrado en la tabla
-        // Asegúrate de que 'tablaModelo' sea tu DefaultTableModel para el ABB
-        // O si estás mostrando en la tabla AVL, usa el modelo correspondiente.
+
         mostrarDatosEnTabla(Arrays.asList(vehiculoEncontrado));
 
     } else {
@@ -762,7 +753,6 @@ public void agregarVehiculoAVL() {
         Vehiculo nuevoVehiculo = new Vehiculo(id, placa, dpi, nombre, marca, modelo, anio, multas, traspasos, departamento);
 
         // Inserta el nuevo vehículo en el árbol AVL
-        // Asume que tu clase ArbolAVL tiene un método insertar(Vehiculo v)
         arbolAVL.insertar(nuevoVehiculo);
 
         // ¡Actualiza Tabla1 para reflejar los cambios!
@@ -770,12 +760,6 @@ public void agregarVehiculoAVL() {
         JOptionPane.showMessageDialog(this, "Vehículo agregado al AVL con ID: " + id, "Éxito", JOptionPane.INFORMATION_MESSAGE);
         limpiarCamposAVL(); // Limpia los campos después de agregar
 
-        // Opcional: Si quieres que también se agregue al ABB al mismo tiempo, descomenta:
-        // arbolABB.insertar(nuevoVehiculo);
-        // actualizarTabla(arbolABB.obtenerTodosLosVehiculos(), Tabla);
-
-        // Opcional: Persistir este nuevo vehículo en el archivo correspondiente
-        // Necesitarás implementar 'guardarVehiculoEnArchivo'
         String rutaCarpetaDepartamentos = obtenerRutaBaseDepartamentos(); // Debes tener este método
         String rutaArchivoDepartamento = rutaCarpetaDepartamentos + File.separator + departamento + File.separator + departamento + "_vehiculos.txt";
         guardarVehiculoEnArchivo(nuevoVehiculo, rutaArchivoDepartamento); // Debes tener este método
@@ -840,8 +824,7 @@ private void eliminarVehiculoAVL() {
             }
         }
     } else {
-        // Si el vehículo no se encontró, la operación de "eliminación" no tuvo éxito
-        // pero sí hubo una búsqueda. Podrías registrar el tiempo de la búsqueda fallida.
+
         long endTime = System.nanoTime(); // Detiene el temporizador después de la búsqueda fallida
         double durationInSeconds = (double) (endTime - startTime) / 1_000_000_000.0;
 
@@ -854,9 +837,6 @@ private void eliminarVehiculoAVL() {
     }
 }
 // Método para modificar un vehículo en el AVL
-// Método para modificar un vehículo en el AVL
-
-// En tu clase Principal.java
 private void actualizarVehiculoEnArchivo(Vehiculo vehiculoModificado) throws IOException { // <--- Asegúrate de tener "throws IOException" aquí
     String departamento = vehiculoModificado.getDepartamento();
     String rutaCarpetaDepartamentos = obtenerRutaBaseDepartamentos();
@@ -875,8 +855,7 @@ private void actualizarVehiculoEnArchivo(Vehiculo vehiculoModificado) throws IOE
     // Leer todos los vehículos excepto el que se va a modificar (por placa)
     try (BufferedReader br = new BufferedReader(new FileReader(archivoOriginal))) {
         String line;
-        // Si tienes encabezado, saltarlo
-        // br.readLine();
+
 
         while ((line = br.readLine()) != null) {
             if (line.trim().isEmpty()) continue;
@@ -907,8 +886,6 @@ private void actualizarVehiculoEnArchivo(Vehiculo vehiculoModificado) throws IOE
 
     // Reescribir todo el archivo con la lista actualizada
     try (FileWriter writer = new FileWriter(rutaArchivoDepartamento, false)) { // 'false' para sobrescribir
-        // Si tus archivos tienen un encabezado, escríbelo aquí
-        // writer.write("ID,PLACA,DPI,Nombre,Marca,Modelo,Año,Multas,Traspasos,Departamento" + System.lineSeparator());
 
         for (Vehiculo v : vehiculosTemporales) {
             writer.write(v.toCsvString() + System.lineSeparator()); // <--- Usamos toCsvString() para 10 campos
@@ -939,8 +916,7 @@ private void visualizarAVL() {
 
         // 2. Ejecuta Graphviz (comando 'dot') para generar la imagen
         String graphvizPath = "dot"; // Asegúrate de que 'dot.exe' esté en tu PATH
-        // Si no está en el PATH, proporciona la ruta completa, por ejemplo:
-        // String graphvizPath = "C:\\Program Files\\Graphviz\\bin\\dot.exe";
+
 
         ProcessBuilder pb = new ProcessBuilder(graphvizPath, "-Tpng", dotFilePath, "-o", imageFilePath);
         Process process = pb.start();
@@ -950,7 +926,6 @@ private void visualizarAVL() {
             System.out.println("DEBUG: Imagen AVL generada en: " + imageFilePath);
 
             // 3. Crea y muestra la nueva ventana con la imagen
-            // ¡CAMBIO AQUÍ! Pasa la ruta de la imagen y el título como segundo argumento.
             VisorArbolFrame visor = new VisorArbolFrame(imageFilePath, "Visualización de Árbol AVL");
             visor.setVisible(true);
 
@@ -968,48 +943,35 @@ private void visualizarAVL() {
         JOptionPane.showMessageDialog(this, "Ocurrió un error al intentar visualizar el AVL: " + e.getMessage(), "Error de Visualización", JOptionPane.ERROR_MESSAGE);
         e.printStackTrace();
     } finally {
-        // Opcional: puedes eliminar los archivos temporales .dot y .png aquí
-        // new File(dotFilePath).delete();
-        // new File(imageFilePath).delete();
     }
 }
-// Método para buscar un vehículo en el AVL
 private void buscarVehiculoAVL() {
-    long startTime = System.nanoTime(); // Inicia el temporizador
-
-    // 'BuscarAVL' es el JTextField en Principal.java para la búsqueda del AVL
+long startTime = System.nanoTime(); // Inicia el temporizador
     String placa = BuscarAVL.getText().trim().toUpperCase(); // Asegúrate de que este JTextField se llama 'BuscarAVL'
+    jTextAreaMensajes.setText(""); // Limpia el JTextArea antes de mostrar el mensaje de búsqueda
     if (placa.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Por favor, ingrese la placa a buscar en el AVL.", "Advertencia", JOptionPane.WARNING_MESSAGE);
-        // Si no se ingresa placa, la operación de búsqueda no se realiza,
-        // por lo que no medimos el tiempo para esta condición de error.
-        return;
+        JOptionPane.showMessageDialog(this, "Por favor, ingrese una placa para buscar.", "Error de Búsqueda", JOptionPane.WARNING_MESSAGE);
+        mostrarTodosLosVehiculos(); // Muestra todos los vehículos si el campo está vacío
+        return; // No es necesario medir el tiempo si la búsqueda no se realizó
     }
-
     // Realiza la búsqueda en el AVL
-    // Asume que tu clase ArbolAVL tiene un método buscarPorPlaca(String placa)
     Vehiculo encontrado = arbolAVL.buscarPorPlaca(placa);
-
     long endTime = System.nanoTime(); // Detiene el temporizador después de la búsqueda
     double durationInSeconds = (double) (endTime - startTime) / 1_000_000_000.0; // Calcula la duración
-
     if (encontrado != null) {
-        JOptionPane.showMessageDialog(this, "Vehículo con placa '" + placa + "' encontrado en el AVL:\n" + encontrado.toString(), "Éxito", JOptionPane.INFORMATION_MESSAGE);
-        // Muestra SOLO el vehículo encontrado en la Tabla1 (la tabla del panel AVL en Principal.java)
-        actualizarTabla(Arrays.asList(encontrado), Tabla1); // Tabla1 es la tabla del AVL
-        BuscarAVL.setText(""); // Limpia el campo de búsqueda después de encontrarlo
+        jTextAreaMensajes.append("Vehículo encontrado:\n" + encontrado.toString() + "\n"); // Usa append
+        actualizarTabla(Arrays.asList(encontrado), Tabla1); // Muestra SOLO el vehículo encontrado
     } else {
-        JOptionPane.showMessageDialog(this, "Vehículo con placa '" + placa + "' no encontrado en el AVL.", "No Encontrado", JOptionPane.INFORMATION_MESSAGE);
-        // Si no se encuentra, vuelve a mostrar todos los vehículos en la tabla o la limpia
-        actualizarTabla(arbolAVL.obtenerTodosLosVehiculos(), Tabla1); // Muestra todos los vehículos del AVL
-        BuscarAVL.setText(""); // Limpia el campo de búsqueda
+        jTextAreaMensajes.append("Vehículo con placa '" + placa + "' no encontrado.\n"); // Usa append
+        mostrarTodosLosVehiculos(); // Muestra todos los vehículos si no se encuentra
+    }
+    // Muestra el tiempo en el jTextAreaMensajes, independientemente de si se encontró o no
+    jTextAreaMensajes.append("Operación BUSCAR (AVL) para placa '" + placa + "' completada en: " + String.format("%.6f", durationInSeconds) + " segundos.\n");
+    // Limpia el campo de búsqueda si lo deseas
+    // BuscarAVL.setText("");
     }
 
-    // Muestra el tiempo en el jTextAreaMensajes, independientemente de si se encontró o no
-    if (jTextAreaMensajes != null) {
-        jTextAreaMensajes.append("Operación BUSCAR (AVL) para placa '" + placa + "' completada en: " + String.format("%.6f", durationInSeconds) + " segundos.\n");
-    }
-}
+
 private void limpiarCamposAVL() {
     txtPlacaAVL.setText("");
     txtDPIAVL.setText("");
@@ -1048,7 +1010,46 @@ private void cargarDepartamentosIniciales() {
         jTextAreaMensajes.append("Advertencia: No se encontró la carpeta base de departamentos en: " + rutaBaseDepartamentos + "\n");
     }
 }
+private void mostrarTodosLosVehiculos() {
+    List<Vehiculo> todosLosVehiculos = arbolAVL.obtenerTodosLosVehiculos(); // Obtiene todos los vehículos del AVL
+    actualizarTabla(todosLosVehiculos, Tabla1); // Actualiza la Tabla1 con todos los vehículos
+}
+private String encriptar(String texto, int desplazamiento) {
+    StringBuilder resultado = new StringBuilder();
 
+    for (char c : texto.toCharArray()) {
+        if (Character.isLetter(c)) {
+            char base = Character.isLowerCase(c) ? 'a' : 'A';
+            c = (char) ((c + desplazamiento - base) % 26 + base);
+        }
+        resultado.append(c);
+    }
+    return resultado.toString();
+}
+
+private String desencriptar(String texto, int desplazamiento) {
+    return encriptar(texto, 26 - desplazamiento); // Desplazamiento inverso
+}
+private void mostrarDatosEnTabla1(List<Vehiculo> listaVehiculos) {
+    // Limpiar todas las filas existentes en Tabla1
+    DefaultTableModel tablaModelo1 = (DefaultTableModel) Tabla1.getModel();
+    tablaModelo1.setRowCount(0); 
+    for (Vehiculo vehiculo : listaVehiculos) {
+        Object[] fila = {
+            vehiculo.getId(),
+            vehiculo.getPlaca(),
+            vehiculo.getDpi(),
+            vehiculo.getNombre(),
+            vehiculo.getMarca(),
+            vehiculo.getModelo(),
+            vehiculo.getAño(),
+            vehiculo.getMultas(),
+            vehiculo.getTraspasos(),
+            vehiculo.getDepartamento()
+        };
+        tablaModelo1.addRow(fila); // Agregar fila a Tabla1
+    }
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -1063,7 +1064,6 @@ private void cargarDepartamentosIniciales() {
         jLabel1 = new javax.swing.JLabel();
         Carga = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        ABB = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         Tabla = new javax.swing.JTable();
         Depto = new javax.swing.JComboBox<>();
@@ -1086,12 +1086,19 @@ private void cargarDepartamentosIniciales() {
         btnAgregarAVL = new javax.swing.JButton();
         txtPlacaModificar1 = new javax.swing.JTextField();
         btnModificarAVL = new javax.swing.JButton();
-        AVL = new javax.swing.JButton();
         btnVisualizarABB1 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         cmbDepartamentoAVL = new javax.swing.JComboBox<>();
         jButton3 = new javax.swing.JButton();
+        Encriptar = new javax.swing.JButton();
+        Desencriptar = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -1104,7 +1111,7 @@ private void cargarDepartamentosIniciales() {
         jLabel1.setText("Sistema Inteligente de Registro de Vehículos y Evaluación (SIRVE)");
 
         Carga.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-        Carga.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/cargando.png"))); // NOI18N
+        Carga.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/carpeta.png"))); // NOI18N
         Carga.setText("Data Sheets");
         Carga.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 3, 12))); // NOI18N
         Carga.addActionListener(new java.awt.event.ActionListener() {
@@ -1118,15 +1125,6 @@ private void cargarDepartamentosIniciales() {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/call.png"))); // NOI18N
         jLabel2.setText("Admin");
 
-        ABB.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-        ABB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/arbol-de-decision.png"))); // NOI18N
-        ABB.setText("ABB");
-        ABB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ABBActionPerformed(evt);
-            }
-        });
-
         Tabla.setBackground(new java.awt.Color(102, 255, 255));
         Tabla.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         Tabla.setModel(new javax.swing.table.DefaultTableModel(
@@ -1139,6 +1137,7 @@ private void cargarDepartamentosIniciales() {
         ));
         jScrollPane1.setViewportView(Tabla);
 
+        Depto.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         Depto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Antigua_Guatemala", "Chimaltenango", "Chiquimula", "Escuintla", "Guatemala", "Huehuetenango", "Peten", "Quetzaltenango", "San_Marcos", "Suchitepequez" }));
         Depto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1176,6 +1175,7 @@ private void cargarDepartamentosIniciales() {
             }
         });
 
+        Agregar.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         Agregar.setText("Agregar");
         Agregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1183,6 +1183,7 @@ private void cargarDepartamentosIniciales() {
             }
         });
 
+        btnModificar.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/editing.png"))); // NOI18N
         btnModificar.setText("MOD");
         btnModificar.addActionListener(new java.awt.event.ActionListener() {
@@ -1197,6 +1198,7 @@ private void cargarDepartamentosIniciales() {
             }
         });
 
+        btnVisualizarABB.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnVisualizarABB.setText("VER ABB");
         btnVisualizarABB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1236,6 +1238,7 @@ private void cargarDepartamentosIniciales() {
             }
         });
 
+        btnAgregarAVL.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnAgregarAVL.setText("Agregar");
         btnAgregarAVL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1243,6 +1246,7 @@ private void cargarDepartamentosIniciales() {
             }
         });
 
+        btnModificarAVL.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnModificarAVL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/editing.png"))); // NOI18N
         btnModificarAVL.setText("MOD");
         btnModificarAVL.addActionListener(new java.awt.event.ActionListener() {
@@ -1251,15 +1255,7 @@ private void cargarDepartamentosIniciales() {
             }
         });
 
-        AVL.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
-        AVL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/arbol-de-decision.png"))); // NOI18N
-        AVL.setText("AVL");
-        AVL.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AVLActionPerformed(evt);
-            }
-        });
-
+        btnVisualizarABB1.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnVisualizarABB1.setText("VER AVL");
         btnVisualizarABB1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1267,6 +1263,7 @@ private void cargarDepartamentosIniciales() {
             }
         });
 
+        jButton1.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/expediente.png"))); // NOI18N
         jButton1.setText("TRASPASOS");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -1275,6 +1272,7 @@ private void cargarDepartamentosIniciales() {
             }
         });
 
+        jButton2.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/expediente.png"))); // NOI18N
         jButton2.setText("MULTAS");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -1283,6 +1281,7 @@ private void cargarDepartamentosIniciales() {
             }
         });
 
+        cmbDepartamentoAVL.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         cmbDepartamentoAVL.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Antigua_Guatemala", "Chimaltenango", "Chiquimula", "Escuintla", "Guatemala", "Huehuetenango", "Peten", "Quetzaltenango", "San_Marcos", "Suchitepequez" }));
         cmbDepartamentoAVL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1290,10 +1289,67 @@ private void cargarDepartamentosIniciales() {
             }
         });
 
+        jButton3.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jButton3.setText("Resumen");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
+            }
+        });
+
+        Encriptar.setText("Encriptar");
+        Encriptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EncriptarActionPerformed(evt);
+            }
+        });
+
+        Desencriptar.setText("Desencriptar");
+        Desencriptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DesencriptarActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("InOrden");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        jButton5.setText("PreOrden");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        jButton6.setText("PostOrden");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
+        jButton7.setText("InOrden");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
+        jButton8.setText("PreOrden");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
+        jButton9.setText("PostOrden");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
             }
         });
 
@@ -1313,133 +1369,156 @@ private void cargarDepartamentosIniciales() {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel2))
                     .addGroup(PrinLayout.createSequentialGroup()
-                        .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PrinLayout.createSequentialGroup()
+                                .addGap(31, 31, 31)
                                 .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(PrinLayout.createSequentialGroup()
-                                        .addGap(25, 25, 25)
-                                        .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 854, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 854, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(BBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(Buscador, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(141, 141, 141)
+                                        .addComponent(TextEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(28, 28, 28)
+                                        .addComponent(btnEliminar)
+                                        .addGap(90, 90, 90)
+                                        .addComponent(Agregar)
+                                        .addGap(103, 103, 103)
+                                        .addComponent(txtPlacaModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btnModificar))
+                                    .addGroup(PrinLayout.createSequentialGroup()
+                                        .addComponent(cmbDepartamentoAVL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(178, 178, 178)
+                                        .addComponent(jButton7)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton8)
+                                        .addGap(27, 27, 27)
+                                        .addComponent(jButton9))
+                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 854, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(PrinLayout.createSequentialGroup()
+                                .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(PrinLayout.createSequentialGroup()
                                         .addGap(14, 14, 14)
                                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(104, 104, 104)
+                                        .addComponent(jButton4)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton5)
+                                        .addGap(31, 31, 31)
+                                        .addComponent(jButton6)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jButton3)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
-                            .addGroup(PrinLayout.createSequentialGroup()
-                                .addGap(60, 60, 60)
-                                .addComponent(cmbDepartamentoAVL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton2)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton1)
-                                .addGap(281, 281, 281)))
+                                        .addComponent(Encriptar)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(Desencriptar))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PrinLayout.createSequentialGroup()
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 854, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                         .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ABB)
-                            .addGroup(PrinLayout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(btnVisualizarABB1)
+                                .addComponent(btnVisualizarABB))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PrinLayout.createSequentialGroup()
                                 .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(BBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(TextEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtPlacaModificar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnModificar)
-                                    .addComponent(Buscador, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnEliminar)
-                                    .addComponent(Agregar)))
-                            .addGroup(PrinLayout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(BuscarAVL, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(TextEliminar1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtPlacaModificar1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(PrinLayout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(btnBuscarAVL, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(PrinLayout.createSequentialGroup()
-                                        .addGap(12, 12, 12)
-                                        .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(btnModificarAVL)
-                                            .addComponent(btnAgregarAVL)
-                                            .addComponent(BtnEliminarAVL)))))
-                            .addGroup(PrinLayout.createSequentialGroup()
-                                .addComponent(btnVisualizarABB)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnVisualizarABB1))
-                            .addComponent(AVL))
-                        .addGap(0, 23, Short.MAX_VALUE)))
+                                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGap(3, 3, 3)))
+                        .addGap(0, 35, Short.MAX_VALUE))
+                    .addGroup(PrinLayout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addComponent(BuscarAVL, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnBuscarAVL, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(136, 136, 136)
+                        .addComponent(TextEliminar1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(BtnEliminarAVL)
+                        .addGap(100, 100, 100)
+                        .addComponent(btnAgregarAVL)
+                        .addGap(91, 91, 91)
+                        .addComponent(txtPlacaModificar1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnModificarAVL)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         PrinLayout.setVerticalGroup(
             PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PrinLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PrinLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PrinLayout.createSequentialGroup()
-                                .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(Carga)
-                                    .addComponent(Depto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(PrinLayout.createSequentialGroup()
-                                .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel1))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(btnVisualizarABB)
-                                    .addComponent(btnVisualizarABB1)
-                                    .addComponent(jButton3))))
-                        .addGap(23, 23, 23)
-                        .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(PrinLayout.createSequentialGroup()
-                                .addComponent(ABB)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(BBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Buscador))
-                                .addGap(18, 18, 18)
-                                .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(TextEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnEliminar))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Agregar)
-                                .addGap(18, 18, 18)
-                                .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(txtPlacaModificar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnModificar))))
-                        .addGap(32, 32, 32)
-                        .addComponent(AVL)
-                        .addGap(35, 35, 35))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PrinLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1)
-                            .addComponent(cmbDepartamentoAVL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2))
-                        .addGap(52, 52, 52)))
-                .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PrinLayout.createSequentialGroup()
-                        .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(BuscarAVL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnBuscarAVL))
-                        .addGap(20, 20, 20)
                         .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(TextEliminar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BtnEliminarAVL))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnAgregarAVL)
-                        .addGap(18, 18, 18)
+                            .addComponent(Carga)
+                            .addComponent(Depto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PrinLayout.createSequentialGroup()
+                        .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, Short.MAX_VALUE)
+                        .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnVisualizarABB)
+                            .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(Encriptar)
+                                .addComponent(Desencriptar))))
+                    .addGroup(PrinLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtPlacaModificar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnModificarAVL)))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(124, Short.MAX_VALUE))
+                            .addComponent(jButton4)
+                            .addComponent(jButton5)
+                            .addComponent(jButton6))))
+                .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PrinLayout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(btnVisualizarABB1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton3)
+                        .addGap(27, 27, 27)
+                        .addComponent(jButton2)
+                        .addGap(26, 26, 26)
+                        .addComponent(jButton1))
+                    .addGroup(PrinLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Buscador)
+                    .addComponent(BBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TextEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnEliminar)
+                    .addComponent(Agregar)
+                    .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtPlacaModificar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnModificar)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cmbDepartamentoAVL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton7)
+                    .addComponent(jButton8)
+                    .addComponent(jButton9))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PrinLayout.createSequentialGroup()
+                        .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(BuscarAVL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TextEliminar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(btnAgregarAVL)
+                                .addComponent(txtPlacaModificar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnModificarAVL)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(PrinLayout.createSequentialGroup()
+                        .addGroup(PrinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnBuscarAVL)
+                            .addComponent(BtnEliminarAVL))
+                        .addContainerGap(37, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1450,9 +1529,7 @@ private void cargarDepartamentosIniciales() {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Prin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 64, Short.MAX_VALUE))
+            .addComponent(Prin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -1477,17 +1554,6 @@ private void cargarDepartamentosIniciales() {
             jTextAreaMensajes.setText("Carga de archivos cancelada.");
         }
     }//GEN-LAST:event_CargaActionPerformed
-
-    private void ABBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ABBActionPerformed
-        if (arbolABB.obtenerVehiculosOrdenados().isEmpty()) {
-            jTextAreaMensajes.setText("No hay datos cargados para mostrar en el ABB.");
-            return;
-        }
-        List<Vehiculo> vehiculosOrdenados = arbolABB.obtenerVehiculosOrdenados();
-        mostrarDatosEnTabla(vehiculosOrdenados);
-        jTextAreaMensajes.setText("Datos cargados del ABB y mostrados en la tabla (ordenados por placa).");
-        Depto.setSelectedItem("Todos");
-    }//GEN-LAST:event_ABBActionPerformed
 private void jComboBoxDepartamentosItemStateChanged(java.awt.event.ItemEvent evt) {
         if (evt.getStateChange() == java.awt.event.ItemEvent.SELECTED) {
             String departamentoSeleccionado = (String) Depto.getSelectedItem();
@@ -1528,33 +1594,22 @@ Agregar.setVisible(true);
     // 1. Get the plate number from the text field where the user enters it
     String placaAModificar = txtPlacaModificar.getText().trim().toUpperCase(); // Assuming 'txtPlacaModificar' is your JTextField
 
-    // 2. Validate if the plate field is empty
     if (placaAModificar.isEmpty()) {
         JOptionPane.showMessageDialog(this, "Por favor, ingresa la placa del vehículo a modificar.", "Campo Vacío", JOptionPane.WARNING_MESSAGE);
         return; // Exit the method if the field is empty
     }
 
-    // 3. Search for the vehicle in your data structure (e.g., your ABB)
-    // Make sure 'arbolABB' is an instance of your ABB and has a 'buscarPorPlaca' method
     Vehiculo vehiculoEncontrado = arbolABB.buscarPorPlaca(placaAModificar); 
 
     // 4. Check if the vehicle was found
     if (vehiculoEncontrado != null) {
-        // 5. If found, create an instance of EditarVehiculo,
-        //    passing 'this' (the Principal instance) and the found 'Vehiculo' object.
-        EditarVehiculo editarFrame = new EditarVehiculo(this, vehiculoEncontrado); 
-        
-        // 6. Make the EditarVehiculo window visible
-        editarFrame.setVisible(true);
-        
-        // Optional: Center the new window relative to Principal
-        editarFrame.setLocationRelativeTo(this);
 
-        // Optional: Clear the search text field in Principal after opening the edit window
+        EditarVehiculo editarFrame = new EditarVehiculo(this, vehiculoEncontrado); 
+        editarFrame.setVisible(true);
+        editarFrame.setLocationRelativeTo(this);
         txtPlacaModificar.setText("");
 
     } else {
-        // 7. If the vehicle was not found, show a message to the user
         JOptionPane.showMessageDialog(this, "Vehículo con placa '" + placaAModificar + "' no encontrado.", "No Encontrado", JOptionPane.INFORMATION_MESSAGE);
     }
 
@@ -1582,44 +1637,31 @@ Agregar.setVisible(true);
     }//GEN-LAST:event_btnAgregarAVLActionPerformed
 
     private void btnModificarAVLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarAVLActionPerformed
- // 1. Get the plate number from the text field where the user enters it
+
     String placaAModificar = txtPlacaModificar1.getText().trim().toUpperCase(); // Assuming 'txtPlacaModificar' is your JTextField
 
-    // 2. Validate if the plate field is empty
     if (placaAModificar.isEmpty()) {
         JOptionPane.showMessageDialog(this, "Por favor, ingresa la placa del vehículo a modificar.", "Campo Vacío", JOptionPane.WARNING_MESSAGE);
         return; // Exit the method if the field is empty
     }
 
-    // 3. Search for the vehicle in your data structure (e.g., your ABB)
-    // Make sure 'arbolABB' is an instance of your ABB and has a 'buscarPorPlaca' method
     Vehiculo vehiculoEncontrado = arbolAVL.buscarPorPlaca(placaAModificar); 
 
-    // 4. Check if the vehicle was found
     if (vehiculoEncontrado != null) {
-        // 5. If found, create an instance of EditarVehiculo,
-        //    passing 'this' (the Principal instance) and the found 'Vehiculo' object.
+
         EditarVehiculo editarFrame = new EditarVehiculo(this, vehiculoEncontrado); 
-        
-        // 6. Make the EditarVehiculo window visible
+
         editarFrame.setVisible(true);
-        
-        // Optional: Center the new window relative to Principal
+
         editarFrame.setLocationRelativeTo(this);
 
-        // Optional: Clear the search text field in Principal after opening the edit window
         txtPlacaModificar.setText("");
 
-    } else {
-        // 7. If the vehicle was not found, show a message to the user
+    } else {    
         JOptionPane.showMessageDialog(this, "Vehículo con placa '" + placaAModificar + "' no encontrado.", "No Encontrado", JOptionPane.INFORMATION_MESSAGE);
     }
 
     }//GEN-LAST:event_btnModificarAVLActionPerformed
-
-    private void AVLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AVLActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AVLActionPerformed
 
     private void btnVisualizarABB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVisualizarABB1ActionPerformed
 visualizarAVL();
@@ -1657,14 +1699,124 @@ Traspasos.setVisible(true);
     resumenFrame.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void EncriptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EncriptarActionPerformed
+        long startTime = System.nanoTime();
+        for (int i = 0; i < tablaModelo.getRowCount(); i++) {
+            for (int j = 1; j < tablaModelo.getColumnCount(); j++) { // Empezar desde 1 para evitar ID
+                Object value = tablaModelo.getValueAt(i, j);
+                if (value instanceof String) {
+                    String original = (String) value;
+                    String encriptado = encriptar(original, 3);
+                    tablaModelo.setValueAt(encriptado, i, j);
+                }
+            }
+        }
+        for (int i = 0; i < tablaModelo1.getRowCount(); i++) {
+            for (int j = 1; j < tablaModelo1.getColumnCount(); j++) { // Empezar desde 1 para evitar ID
+                Object value = tablaModelo1.getValueAt(i, j);
+                if (value instanceof String) {
+                    String original = (String) value;
+                    String encriptado = encriptar(original, 3);
+                    tablaModelo1.setValueAt(encriptado, i, j);
+                }
+            }
+        }
+        long endTime = System.nanoTime();
+        double durationSeconds = (endTime - startTime) / 1_000_000_000.0;
+        jTextAreaMensajes.append(String.format("Encriptación completada en %.6f segundos.%n", durationSeconds));
+    
+    }//GEN-LAST:event_EncriptarActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    long start = System.nanoTime();
+    List<Vehiculo> listaInOrden = arbolABB.obtenerVehiculosOrdenados(); // InOrden ya definido en ABB
+    mostrarDatosEnTabla(listaInOrden);
+    long end = System.nanoTime();
+    double seconds = (end - start) / 1_000_000_000.0;
+    jTextAreaMensajes.append(String.format("Recorrido InOrden mostrado en %.6f segundos.%n", seconds));
+
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    long start = System.nanoTime();
+    List<Vehiculo> listaPreOrden = arbolABB.obtenerVehiculosPreOrden(); // Método que debes implementar en ABB
+    mostrarDatosEnTabla(listaPreOrden);
+    long end = System.nanoTime();
+    double seconds = (end - start) / 1_000_000_000.0;
+    jTextAreaMensajes.append(String.format("Recorrido PreOrden mostrado en %.6f segundos.%n", seconds));
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    long start = System.nanoTime();
+    List<Vehiculo> listaPosOrden = arbolABB.obtenerVehiculosPosOrden(); // Método que debes implementar en ABB
+    mostrarDatosEnTabla(listaPosOrden);
+    long end = System.nanoTime();
+    double seconds = (end - start) / 1_000_000_000.0;
+    jTextAreaMensajes.append(String.format("Recorrido PosOrden mostrado en %.6f segundos.%n", seconds));
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    long start = System.nanoTime();
+    List<Vehiculo> listaInOrden = arbolAVL.obtenerTodosLosVehiculos(); // Recorrido InOrden ya implementado
+    mostrarDatosEnTabla1(listaInOrden); // Actualiza Tabla1
+    long end = System.nanoTime();
+    double seconds = (end - start) / 1_000_000_000.0;
+    jTextAreaMensajes.append(String.format("Recorrido InOrden de AVL mostrado en %.6f segundos.%n", seconds));
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    long start = System.nanoTime();
+    List<Vehiculo> listaPreOrden = arbolAVL.obtenerVehiculosPreOrden(); // Debes tener este método en AVL
+    mostrarDatosEnTabla1(listaPreOrden); // Actualiza Tabla1
+    long end = System.nanoTime();
+    double seconds = (end - start) / 1_000_000_000.0;
+    jTextAreaMensajes.append(String.format("Recorrido PreOrden de AVL mostrado en %.6f segundos.%n", seconds));
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    long start = System.nanoTime();
+    List<Vehiculo> listaPosOrden = arbolAVL.obtenerVehiculosPosOrden(); // Debes tener este método en AVL
+    mostrarDatosEnTabla1(listaPosOrden); // Actualiza Tabla1
+    long end = System.nanoTime();
+    double seconds = (end - start) / 1_000_000_000.0;
+    jTextAreaMensajes.append(String.format("Recorrido PosOrden de AVL mostrado en %.6f segundos.%n", seconds));
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void DesencriptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DesencriptarActionPerformed
+    // Desencriptar Tabla1 (excepto columna ID)
+        long startTime = System.nanoTime();
+    // Desencriptar Tabla (excepto columna ID)
+    for (int i = 0; i < tablaModelo.getRowCount(); i++) {
+        for (int j = 1; j < tablaModelo.getColumnCount(); j++) { // Empieza en 1 para evitar columna ID
+            Object value = tablaModelo.getValueAt(i, j);
+            if (value instanceof String) {
+                String encriptado = (String) value;
+                String original = desencriptar(encriptado, 3);
+                tablaModelo.setValueAt(original, i, j);
+            }
+        }
+    }
+    for (int i = 0; i < tablaModelo1.getRowCount(); i++) {
+        for (int j = 1; j < tablaModelo1.getColumnCount(); j++) {
+            Object value = tablaModelo1.getValueAt(i, j);
+            if (value instanceof String) {
+                String encriptado = (String) value;
+                String original = desencriptar(encriptado, 3);
+                tablaModelo1.setValueAt(original, i, j);
+            }
+        }
+    }
+    long endTime = System.nanoTime();
+    double durationSeconds = (endTime - startTime) / 1_000_000_000.0;
+    jTextAreaMensajes.append(String.format("Desencriptación completada en %.6f segundos.%n", durationSeconds));
+    }//GEN-LAST:event_DesencriptarActionPerformed
+
     /**
      * @param args the command line arguments
      */
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ABB;
-    private javax.swing.JButton AVL;
     private javax.swing.JButton Agregar;
     private javax.swing.JTextField BBuscar;
     private javax.swing.JButton BtnEliminarAVL;
@@ -1672,6 +1824,8 @@ Traspasos.setVisible(true);
     private javax.swing.JTextField BuscarAVL;
     private javax.swing.JButton Carga;
     private javax.swing.JComboBox<String> Depto;
+    private javax.swing.JButton Desencriptar;
+    private javax.swing.JButton Encriptar;
     private javax.swing.JPanel Prin;
     private javax.swing.JTable Tabla;
     private javax.swing.JTable Tabla1;
@@ -1688,6 +1842,12 @@ Traspasos.setVisible(true);
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
