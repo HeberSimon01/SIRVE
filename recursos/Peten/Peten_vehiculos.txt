@@ -1,0 +1,1001 @@
+Placa,DPI,Nombre,Marca,Modelo,Año,Multas,Traspasos
+AAE-3810,5493158000355,Socorro Teruel Mata,Honda,Civic,2006,5,0
+AAW-9089,1173903485588,Dani Guerra Valenzuela,Honda,CR-V,2004,2,2
+AAZ-5982,6425052012406,Consuela de Pellicer,Mazda,BT-50,2000,2,1
+ACJ-4130,6630260282544,Regina Ponce Machado,Toyota,Corolla,2018,3,0
+ADJ-7314,9211809284771,Teodosio Lago Andrade,Hyundai,Santa Fe,2019,5,0
+AEE-3105,6258118726450,Leire Palomares-Alcázar,Toyota,Yaris,2024,4,2
+AEK-8711,1772256582692,Pascual de Cuadrado,Honda,Fit,2011,5,0
+AEV-6162,9020016200999,Feliciana Alba Figuerola,Mazda,BT-50,2020,2,1
+AFK-1617,4175023598392,Montserrat Bayón Perelló,Kia,Sorento,2007,5,3
+AGO-6334,6699047087272,Jimena Hoyos-Roman,Mazda,6,2014,0,2
+AIR-7795,1530616700986,Emma de Falcó,Kia,Sorento,2001,2,2
+AKZ-1466,4857778818387,Javi Ariza Tena,Honda,Fit,1996,4,2
+ANG-0422,8518709887487,María Del Carmen Ibáñez Zamorano,Kia,Rio,2014,2,1
+AOK-9575,9484460326857,Fidela Blasco Riera,Mazda,BT-50,2006,5,2
+APE-9763,1791210822167,Raúl Nico Manrique Galván,Toyota,Yaris,2018,1,2
+APJ-8066,9434915935261,Alma Vicens Múñiz,Kia,Picanto,2004,2,3
+APT-0188,9405073228988,Fermín Naranjo-Huertas,Kia,Sorento,2018,0,2
+AQL-1521,8267194844789,Lisandro Oller Angulo,Kia,Picanto,1998,3,1
+AQL-4915,1310075392751,Salomé Piquer Becerra,Toyota,Corolla,2023,2,1
+AQQ-4604,7048282490556,Serafina Guzman Santos,Hyundai,Accent,2000,3,1
+ARD-7194,7777516787678,Edelmira Barco Jaume,Toyota,Corolla,2011,0,1
+ARI-4584,2622091628104,Adoración Lorenza Garcia Morillo,Toyota,Hilux,2001,0,2
+ASN-7951,1336185248014,Trinidad Pujol Falcó,Kia,Sportage,2011,4,2
+ASS-5454,1817507436143,Segismundo Patricio Romeu Gascón,Honda,Fit,2023,4,2
+ATG-0740,9060337134409,María Dolores de Arregui,Honda,Fit,2013,3,0
+ATH-5130,7768443655942,Severo del Moreno,Hyundai,Tucson,2015,5,1
+AUK-5582,3044650894815,Aroa Rios-Azcona,Toyota,RAV4,2008,5,3
+AUV-0599,1385961070096,Bernardo Mulet Doménech,Toyota,RAV4,2007,3,2
+AUZ-1712,6592359382369,Carlito Ribera-Macias,Hyundai,Santa Fe,2009,5,0
+AVB-1209,2223112497820,Felipe Pellicer Cañas,Kia,Picanto,2016,3,0
+AVD-9884,8703345349195,Virginia Bárcena Tudela,Mazda,BT-50,2002,1,3
+AVI-6733,4541074010671,León Isidoro Ramos Bellido,Kia,Picanto,2001,2,0
+AVV-5460,2818942962286,Mar Sans Aranda,Honda,CR-V,1995,1,3
+AWD-3123,3993056619399,Gloria Bermejo Barberá,Toyota,Corolla,2008,4,2
+AWF-8238,7087789566540,Rodrigo Bejarano-Lladó,Kia,Sportage,1996,1,1
+AWS-8883,4770491372874,Cayetana Cal Villena,Toyota,Hilux,2016,4,0
+AXI-1151,7162937713519,Violeta Guzmán Cuadrado,Kia,Sportage,2004,4,2
+AXI-6526,3862529393669,Julián Cuenca Zaragoza,Toyota,RAV4,2013,0,2
+AYO-4482,6899379062513,Candelario Aguado Zapata,Toyota,RAV4,2005,2,2
+AYO-9042,6764480107181,Elodia Luque Aramburu,Toyota,Corolla,1997,4,1
+AZS-1962,7028321279954,Balduino Saldaña Peiró,Hyundai,Tucson,2004,2,1
+BAC-7106,3486445440139,Pelayo Rebollo-Garrido,Toyota,Hilux,2006,3,0
+BAK-4415,9777241021319,Jose del Lladó,Hyundai,Tucson,2023,2,2
+BAM-0967,7988052940936,Serafina Acuña,Mazda,3,2016,5,3
+BCF-9009,8811662661799,Regina Rosell Corral,Toyota,Corolla,2000,2,3
+BDP-8864,6641856219157,Javier Bayona Herrero,Kia,Sorento,2019,2,1
+BDT-2971,2200641371283,Édgar Carrillo Torres,Honda,Civic,2000,1,3
+BFJ-7065,2855726558894,Vasco Ayala-Gonzalez,Kia,Sorento,2008,4,1
+BGD-0161,1658866821563,Felipe Olmedo Olivé,Kia,Sorento,2007,2,1
+BGH-4474,7942306896260,Asdrubal Miranda Sanabria,Mazda,6,2011,1,1
+BGR-7483,5463635444326,Balduino José María Lorenzo Feijoo,Kia,Picanto,1998,5,2
+BGS-3288,5693784659441,Ema Busquets Sainz,Honda,Civic,2002,2,2
+BHR-9761,6961517501933,Eleuterio Higueras Cabañas,Hyundai,Tucson,1998,0,1
+BIE-5583,3562292929020,Blanca Bellido Alberdi,Kia,Sorento,1997,5,2
+BIR-4678,9475775034426,Estela Cárdenas-Gascón,Kia,Picanto,1997,2,3
+BJF-2632,2196593502623,Leticia Abad Abascal,Toyota,Corolla,2017,5,3
+BJK-1651,3713375511498,Sabina Ainara Diego Coello,Honda,Fit,2023,1,2
+BJX-9725,3959541958500,Fátima Hernandez Coll,Kia,Rio,1998,3,1
+BKF-7084,5940819474206,Mauricio Vallés Valenzuela,Hyundai,Elantra,2015,0,2
+BKL-3033,2691825493267,Etelvina Jódar-Bárcena,Mazda,CX-5,1998,1,1
+BKW-0953,2876061907072,Mireia de Anaya,Toyota,RAV4,2018,5,1
+BLL-4837,2772596223716,Victor Manuel Sabas Parejo Caro,Kia,Picanto,2002,0,2
+BLR-2034,7320935843685,Ana Belén González Mayo,Mazda,6,2011,4,2
+BMV-6184,9794728018563,Candelas Casanovas Vigil,Toyota,Yaris,1998,3,0
+BMZ-3911,8025284050377,Pacífica Donaire Bellido,Toyota,RAV4,2005,1,1
+BNB-7881,8753612582533,Chus Rios-Campo,Kia,Sorento,2022,4,0
+BPH-9867,6623161715839,César Villegas Echeverría,Hyundai,Tucson,2016,2,0
+BPT-5434,3498104139452,Matías Casado Luna,Hyundai,Elantra,2020,2,3
+BSJ-6271,6201683102004,Noelia Garcés Guitart,Toyota,Corolla,1995,2,1
+BSK-8879,6074744254897,Custodia Cerdán Pozo,Hyundai,Accent,2010,3,2
+BUI-4399,6040073883112,Esmeralda Garay Moliner,Toyota,Yaris,2013,3,3
+BVF-1969,5087452190977,Berto Llopis Gual,Kia,Sorento,2004,5,2
+BVK-0184,5071178507588,Domitila Giner Cuevas,Honda,Accord,1995,4,1
+BWK-0083,8313857402389,Ofelia Noguera Campoy,Honda,Accord,2012,0,3
+BWT-2320,2483551915252,José Antonio Rodolfo Simó Villa,Toyota,RAV4,1995,0,0
+BXM-1175,8728302114842,Carmela Estrella Artigas Calvet,Mazda,CX-5,2002,5,0
+BYF-6193,5717365235318,Rosalva Bermudez Muñoz,Kia,Picanto,2003,3,0
+BZG-7518,5768792012518,Ildefonso Priego Castells,Toyota,RAV4,2018,2,2
+BZH-0449,3056424201424,Leandro Cañete Arrieta,Hyundai,Tucson,2004,1,0
+BZX-3339,7049711426622,Natanael Parra Vega,Kia,Picanto,2019,3,3
+CAQ-1604,1999402384370,Sebastián Roldan Zorrilla,Toyota,Corolla,2004,2,2
+CCB-7938,5460025262927,Merche Torres Guzmán,Mazda,BT-50,2006,3,2
+CCF-6043,1232223071564,Modesta Sacristán,Toyota,Hilux,2018,5,1
+CCY-3840,2890445818995,Zaira Bárbara Sosa Soriano,Mazda,CX-5,2010,4,2
+CDA-7906,9143264074879,Evaristo Samuel Domínguez Andrade,Kia,Sorento,2010,0,3
+CDF-8694,8405634395165,Salomón Llanos Merino,Honda,CR-V,2024,2,0
+CEZ-0728,9927348433647,Goyo Quero Oliver,Kia,Sorento,1996,1,1
+CFK-5472,7128987388727,Virgilio Lago Bolaños,Mazda,CX-5,2020,2,1
+CFU-6902,7264221711931,Amor Anglada-Cruz,Toyota,RAV4,2018,3,3
+CGD-6990,7694174997324,Jose Francisco de Carrión,Mazda,3,2018,5,0
+CGG-2023,6675734182183,Plinio Navarrete Carbó,Hyundai,Accent,2018,5,2
+CGN-6079,1558888034133,Rodrigo Torres,Mazda,6,2011,3,0
+CHN-5819,9328230765894,Cristian Galiano-Solsona,Mazda,6,2019,4,3
+CIP-7694,7967622795141,Buenaventura Pina Rubio,Kia,Picanto,2015,0,0
+CIY-2937,3457953181775,Dani Barral Jerez,Toyota,Yaris,2007,3,3
+CJF-9744,9919003977155,Leandro Torrecilla Sola,Toyota,Hilux,1999,2,1
+CLQ-4232,9716772767149,Tomasa Bayo Amores,Kia,Sportage,2000,1,3
+CLW-0260,4490639975571,Carolina del Mesa,Kia,Picanto,2004,0,2
+CMQ-5658,1435417269886,Melchor Vigil Arjona,Hyundai,Santa Fe,2000,5,0
+CNG-2452,7772089265893,Abril Vilaplana,Toyota,Corolla,1995,2,2
+CNN-3494,7388779881928,Cayetana Florencia Lago Fortuny,Mazda,6,2018,2,2
+COX-8648,4634282739843,Tiburcio Alarcón,Honda,Civic,2000,4,0
+CPB-1193,4485902085752,Javier Alemany Belda,Toyota,Yaris,2016,0,3
+CQO-0786,4506286702704,Jesusa Lorenzo-Macías,Kia,Sportage,2015,2,0
+CQP-8645,2164314552984,Carolina Chita Castillo Larrea,Toyota,Hilux,1998,3,2
+CRG-9579,1089102908757,Agustín del Simó,Hyundai,Elantra,2008,5,2
+CRH-1781,5155324278341,Guillermo Andrés-Blanch,Kia,Sorento,2006,1,0
+CRX-2840,1651608887378,Carlito Noguera Miralles,Honda,CR-V,2017,0,0
+CSH-0492,4293483481527,Eric Yuste Alcalá,Toyota,Corolla,2005,1,3
+CTN-9832,5067369455717,Reyes Amelia Roldan Correa,Toyota,RAV4,2011,0,0
+CUF-3267,3313542442906,Severo Galan Martin,Kia,Sportage,1995,5,2
+CVB-6316,2690407299646,Albert Coll Alfonso,Kia,Sportage,2002,2,2
+CVL-1664,2526797431274,Ligia Escalona Quintanilla,Hyundai,Santa Fe,2013,0,1
+CWD-6955,5355050404727,Nilda Araceli Milla Montaña,Honda,Fit,2016,5,0
+CWW-9113,2484154708104,Carmina Checa Guillen,Hyundai,Tucson,2002,5,1
+CXA-3500,5945072242249,Espiridión Abraham Ayuso Arteaga,Mazda,CX-5,2011,4,3
+CYB-1550,9564632451268,Encarnacion Palau Juan,Kia,Rio,1995,3,1
+CYU-2407,3839196444077,Buenaventura Saldaña Rosado,Kia,Sorento,2007,2,1
+CZB-9714,6025278187871,Édgar Renato Fabra Berrocal,Kia,Picanto,1996,5,3
+CZD-8171,2902191630092,Luz Belén Rosselló Bartolomé,Hyundai,Accent,1996,3,0
+DAA-5571,1429059576526,Armando Luís Mancebo,Honda,Accord,2008,0,2
+DBK-0141,4426561106663,Cándido Casals Arnal,Hyundai,Santa Fe,2022,5,1
+DBQ-9255,9712720602141,Fulgencio Castrillo Real,Kia,Rio,2007,3,1
+DCO-2964,3302110406109,Ildefonso Juan Luis Cazorla Flores,Mazda,3,2018,0,0
+DCY-9830,2559299538990,Héctor Burgos Chaparro,Hyundai,Santa Fe,2003,5,2
+DDK-9778,2926345816059,Emilio Tomas,Hyundai,Santa Fe,1995,2,2
+DEN-2539,5896935165432,Darío Burgos Vicens,Toyota,Corolla,2001,4,2
+DFA-0188,1132423309297,Nayara Pineda Samper,Honda,Accord,2014,4,0
+DGF-6434,4032310774398,Jose Ignacio Zurita Arnau,Kia,Sportage,2022,3,1
+DIE-3272,5212466715673,Pilar Guillén Arnau,Kia,Sportage,2014,2,2
+DIG-6150,9860316999254,Marino de Jordán,Toyota,Corolla,2002,5,0
+DJG-2614,9144456026934,Zoraida Teodora Martorell Silva,Mazda,3,2021,3,1
+DJI-9654,4432579027899,Brígida Alemany-Valenzuela,Mazda,CX-5,2005,5,2
+DLA-7931,5526326843226,Malena Doménech Lamas,Toyota,RAV4,2022,0,1
+DLF-7858,3047692590967,Nuria Cabeza Quiroga,Honda,Accord,2001,2,1
+DLJ-9504,4346730603785,Noelia Alarcón,Honda,Fit,2017,3,0
+DMK-1057,7150224494376,Antonio Andreu Tolosa,Toyota,Yaris,2007,1,3
+DMN-4297,2508091538059,Baudelio Galvez Garcés,Toyota,Yaris,2009,5,2
+DOZ-4038,2944119006318,David Tirado Dominguez,Hyundai,Santa Fe,2022,4,0
+DRB-6846,2259834143617,Elba Garmendia-Salamanca,Mazda,6,2024,5,3
+DRO-3057,8215980719276,Roque Palomino Lozano,Honda,Fit,2000,5,1
+DRZ-5068,2181928070137,Gastón Rafa Agustí Vendrell,Toyota,RAV4,2022,1,2
+DRZ-8417,8371975982773,Natividad Carlos Avilés,Toyota,Hilux,2016,2,3
+DSG-8958,1487182662764,Pedro Juan Aparicio,Honda,Fit,2003,2,1
+DSH-3558,3344920112894,Hugo Arranz Rocamora,Honda,Civic,2008,3,0
+DTN-4537,7185011535616,Valeria del Navas,Kia,Sportage,2008,2,0
+DTZ-4845,8406461086366,Brunilda Pino Morales,Toyota,RAV4,2007,0,0
+DUV-1127,3293091521715,Leocadio Zabaleta Pou,Honda,Civic,2014,4,3
+DUZ-1150,1492214977712,Etelvina Calixta Roca Iglesia,Kia,Sportage,1996,2,3
+DVQ-1571,6746993908733,Buenaventura Ibáñez,Hyundai,Elantra,2024,3,1
+DWC-3586,5943157462610,Ángel Pedraza Jaén,Honda,Fit,2000,2,1
+DYS-3334,3406930219189,Ricardo Peña-Macias,Toyota,RAV4,2013,4,3
+DZG-0382,7129156021013,Narciso de Posada,Kia,Picanto,1995,4,0
+DZV-9799,1831724817360,Ismael Zamora Iborra,Toyota,RAV4,2024,5,3
+DZW-1660,2497174287478,Alicia del Becerra,Mazda,BT-50,2019,2,2
+DZZ-9224,2922089489596,Angelita Aramburu Sanmiguel,Mazda,BT-50,2016,0,3
+EAY-7564,4180320408231,Susana Micaela Ávila Anguita,Toyota,RAV4,1997,1,0
+EDI-0878,4720903181880,Hector Hidalgo Amador,Hyundai,Elantra,2001,5,0
+EEW-3853,2959973976786,Ruben Farré Bernal,Toyota,Hilux,2022,1,3
+EFU-4277,3593279471137,Amando Herrero Olmo,Honda,Fit,2024,2,3
+EGG-9641,1191380286236,Rosenda del Puig,Kia,Rio,2011,1,0
+EGL-8137,5127802489886,Ciro Guardiola Sebastián,Toyota,Corolla,1996,2,1
+EGV-1013,5686846953511,Lucho Anaya Exposito,Honda,Civic,1996,1,1
+EIJ-8048,1850742646503,Martirio Elorza Roldan,Hyundai,Elantra,2013,0,1
+EKA-8126,5002930856360,Sabina Batlle,Kia,Rio,1996,3,3
+EKM-5287,3769564576796,María Manuela Chaves-Tamarit,Hyundai,Elantra,2008,0,3
+EKR-9654,9121830652069,María Camps Carmona,Hyundai,Tucson,2005,4,0
+EKX-9564,8227470707484,Domitila Roldán Lluch,Mazda,6,2011,0,2
+ELM-5879,3768962074664,Ismael Guzmán Pardo,Mazda,CX-5,2010,1,1
+ELV-8343,5999249817316,Marcio Villegas,Honda,Civic,2018,0,2
+EMN-7941,7795306956952,Matilde Bustamante Cabanillas,Kia,Picanto,2007,4,3
+EMP-2158,5925433472913,María Cristina Gibert Cobos,Mazda,6,1997,0,0
+EMS-7525,5831596296966,Alcides Duarte Elorza,Mazda,3,1998,0,0
+ENE-8330,5251841676939,Luís del Blasco,Kia,Sorento,2013,1,2
+ENF-7634,6129890732058,Paco Curro Marín Alonso,Hyundai,Elantra,2003,4,0
+ENX-9550,6789024470870,Danilo Carpio Chico,Hyundai,Santa Fe,2021,2,0
+EOQ-2573,2500786382631,Pedro Menéndez-Quero,Hyundai,Tucson,2015,4,1
+EPH-7552,8980686802400,Anita Perera-Morell,Hyundai,Elantra,2019,3,0
+EPM-7054,5878276487802,Fito Calvo Enríquez,Kia,Rio,2003,3,0
+EPP-4019,6867294281068,Calisto Álvaro Castelló Aznar,Honda,Fit,2005,1,2
+EPP-6475,2357964070396,Ana Fernandez Santana,Mazda,BT-50,2006,1,3
+EPZ-7322,7869186002180,Francisco Landa Fabra,Hyundai,Santa Fe,2019,2,1
+EUB-4950,4954897239106,Francisca Pujadas Tudela,Mazda,CX-5,2021,3,3
+EUR-5666,2989644039368,Íngrid Santamaría Sarmiento,Toyota,Yaris,2022,2,3
+EUV-3371,3535815391791,Roldán del Quintana,Toyota,RAV4,2004,2,1
+EXN-0959,3272907262713,Débora Llopis,Honda,Civic,2024,2,3
+EXQ-6051,3907689231066,Dimas de Valentín,Toyota,Hilux,1995,5,2
+EXX-7486,5650754869092,Iker Fiol Nevado,Honda,Accord,2018,0,2
+EYF-3789,4582957121153,Jimena Roig-Barral,Honda,Civic,2000,0,0
+EYL-3411,2542108904905,Sarita Busquets Salom,Toyota,Yaris,2000,4,2
+EZB-1114,7490772102845,Glauco Lopez,Honda,CR-V,2019,3,1
+FAH-9654,2759378267377,Loida Olmo Vall,Honda,Fit,2016,1,3
+FAI-0786,2039897273208,Rodolfo Miró Español,Toyota,RAV4,2006,4,1
+FAO-4992,7733197043060,Roxana Boix Acero,Mazda,BT-50,2004,3,2
+FCN-8553,8583103792149,Eloy de Armengol,Kia,Rio,2016,1,2
+FCS-0522,1027219241598,Gabino Torralba Mateos,Mazda,6,1998,1,0
+FDI-5145,1296179026222,Gastón Olivera-Ferrera,Mazda,CX-5,2009,5,3
+FDW-4877,4776102787955,Gabino Roura Becerra,Honda,Civic,1997,5,0
+FEE-8971,8033488640844,Roldán Company Barceló,Hyundai,Tucson,2020,4,3
+FFC-0129,7879525131027,Roque Estrada-Torrents,Hyundai,Accent,1995,5,0
+FFN-5455,6431188272224,Olivia Miró Rubio,Mazda,CX-5,2017,3,3
+FGM-3536,1309511732027,Amílcar Blanch Soto,Honda,Accord,2018,5,2
+FHM-8522,4590220655341,Glauco Segura Lerma,Hyundai,Santa Fe,2015,1,3
+FIH-2215,2577827937081,Silvio Goicoechea Pardo,Mazda,6,1995,3,1
+FJF-6030,8518457548281,Victoria Araujo Olivé,Hyundai,Elantra,2005,0,2
+FKT-3272,7738815499041,Amanda Caparrós Barrio,Mazda,CX-5,2019,2,2
+FMH-9511,5967654553676,Rufina Cepeda Coll,Toyota,Hilux,2017,5,1
+FNA-6099,8196807809930,Chelo Cañete Camacho,Mazda,3,1998,0,0
+FNR-8819,8814623788483,Casemiro Sureda Pont,Hyundai,Santa Fe,2022,1,0
+FNU-5499,8042359277715,Osvaldo del Villalba,Kia,Rio,2001,3,0
+FOF-1936,1735167175336,Florinda Amores-Armas,Mazda,3,2000,1,2
+FQJ-6375,9917562648838,Gervasio Lumbreras Alcalde,Hyundai,Tucson,2005,5,3
+FRF-7083,1597907513996,Ciriaco Salazar,Toyota,Yaris,2013,4,1
+FSR-5236,4909241026000,Elisabet Pereira Chaparro,Mazda,6,2023,5,3
+FTK-5319,3113889146469,Teófila Clotilde Cánovas Dominguez,Toyota,Hilux,2009,2,0
+FTK-7134,7374681656280,Marcelino Amador-Velasco,Hyundai,Accent,2019,3,2
+FTQ-0892,8587331715120,Susanita Acevedo Espejo,Toyota,Corolla,2007,4,2
+FUJ-0164,7080354528362,Felicidad Huguet Gomis,Hyundai,Santa Fe,2002,4,3
+FUX-6432,7564805524909,Zoraida Almazán Caballero,Hyundai,Santa Fe,2001,2,0
+FVM-0215,8761896964679,Dora del Borrás,Mazda,6,1996,2,3
+FWL-7540,6322890632133,Eusebia Dominguez Molina,Kia,Picanto,2016,2,3
+FWS-2022,3221739548692,Jesusa Narváez Frías,Kia,Sportage,2002,5,0
+FXN-1697,9648173227454,Artemio Sanmiguel Camino,Hyundai,Tucson,2006,5,1
+FYT-4115,6917991591948,Narciso Sáenz Llabrés,Toyota,Corolla,1998,4,0
+FYU-3205,9293693478164,Maribel Casal Maza,Mazda,CX-5,2024,4,2
+GBA-5182,9845831309957,Víctor Aguiló Aguado,Kia,Picanto,2005,1,3
+GBJ-8960,9395407516139,Augusto de Tolosa,Mazda,BT-50,2001,0,3
+GBQ-0364,9320433333817,Fabricio Balaguer Tejada,Kia,Sorento,2017,3,1
+GCJ-3701,9690309610551,Yago Nebot Fernandez,Hyundai,Accent,2005,5,0
+GCU-8099,9384844534824,Paulina de Castejón,Mazda,6,1996,4,2
+GDA-3733,9760552918495,Mariano Castellanos Zaragoza,Kia,Sportage,2011,2,3
+GDU-6774,3730496168913,Cándido Coello Céspedes,Toyota,Corolla,2020,4,3
+GFL-8826,8493464368637,Jessica Portillo-Mancebo,Hyundai,Santa Fe,2023,1,1
+GFO-9586,8922981725382,Macario Corral,Honda,CR-V,1995,5,3
+GFQ-1867,5912682605955,Margarita Pineda Casanovas,Honda,CR-V,2007,0,3
+GFR-4563,8254256513085,Nicanor Pallarès,Honda,Accord,2008,1,2
+GFU-5692,4250176126378,Vidal Palomar-Águila,Mazda,BT-50,2024,2,2
+GFW-2658,1880128407806,Ani de Alegria,Honda,Fit,2006,4,2
+GGC-7375,6180958787323,Evelia Dominguez Tena,Toyota,Hilux,2019,1,1
+GGR-8902,1381608370194,Tiburcio Cervera Arenas,Honda,CR-V,2001,0,2
+GIO-5265,9088798826378,Gisela Valverde Infante,Toyota,Yaris,2002,1,1
+GJG-4304,7609690619756,Valeria Valera Corominas,Hyundai,Accent,2005,4,2
+GKB-9503,4534940927119,Mauricio Nuñez Fajardo,Kia,Sportage,2006,3,3
+GKC-8137,7535973860684,Sandra Lluch-Noguera,Toyota,RAV4,2018,0,3
+GKK-0466,9884380750931,Trinidad Briones Carrasco,Kia,Rio,2015,4,0
+GLO-5917,6722667628102,Evaristo Palmer,Honda,CR-V,2017,5,1
+GNT-4697,7596678235343,Ismael Figueras Pallarès,Hyundai,Tucson,2017,3,2
+GNW-2617,7202506269196,Nico Arrieta Mir,Honda,Civic,2008,4,0
+GOE-2078,4168470823775,Román del Lamas,Honda,Civic,2016,1,1
+GPH-3417,8942356822976,José Antonio Gras-Santamaría,Honda,Civic,2011,0,2
+GPI-3358,8252689817130,Flavio Jaume-Gimeno,Honda,CR-V,2008,1,0
+GPK-2846,8696364469921,Epifanio Guillén-Ruano,Mazda,6,2010,3,2
+GPK-5620,2232365134424,Benjamín Roque Suárez Hoz,Hyundai,Santa Fe,2017,5,3
+GPS-5347,9358302171282,Florentina Ramírez Chaparro,Honda,Civic,2018,3,3
+GPX-1381,9111918097412,Cebrián Trujillo Figueroa,Kia,Sorento,2020,0,3
+GQF-2256,5492666741507,Darío Suarez Sáez,Mazda,BT-50,2011,3,2
+GRD-2143,5086766517188,Jose Luis Clavero Barrio,Toyota,Corolla,1995,1,1
+GSM-8048,2954187750332,Lupita Torrecilla Cisneros,Mazda,3,2015,5,2
+GTG-1374,2234261260450,Isabela Charo Mayoral Roldán,Hyundai,Elantra,2007,1,3
+GUF-2783,6611642322072,Clotilde Benavides Sánchez,Hyundai,Santa Fe,2004,1,1
+GUT-2696,6482885869840,Celestina Cabo Rosell,Kia,Rio,2019,5,0
+GUY-0793,8006135733413,Cebrián del Escolano,Kia,Rio,1998,3,1
+GVF-8964,8608999247146,Pánfilo Palma Cano,Honda,Accord,2019,3,1
+GVP-8593,9231454901027,María Dolores Camps Castrillo,Kia,Sorento,2000,3,3
+GVQ-7412,7513317303802,Maxi Ángel,Hyundai,Accent,2015,4,2
+GVR-0644,4037306964607,Nicolasa Cánovas Miguel,Hyundai,Elantra,2006,2,0
+GWL-0159,4620246620192,Sara de Mayol,Honda,Fit,2020,2,2
+GWP-6976,6637229002049,Pío Eleuterio Ferrer Campoy,Honda,Fit,2021,3,3
+GXC-1900,4129933568803,Carlos Flor Canales,Toyota,Hilux,2014,1,3
+GXD-9901,1323916348350,Luciano Barrera-Muro,Mazda,CX-5,2014,2,0
+GXX-6560,3777545839117,Dora Borrell Baeza,Hyundai,Tucson,2007,1,1
+GYB-0473,1381335593671,Bonifacio Padilla-Casas,Honda,Civic,1996,3,2
+HAX-7260,2712371495013,Mar Quero Gimeno,Mazda,3,2009,5,0
+HBJ-3975,1740478496973,María Fernanda Flores Peral,Hyundai,Tucson,2012,4,2
+HBL-7633,5655609141420,Irma Agudo Almansa,Kia,Sorento,1995,4,0
+HBU-4211,6371655073210,Violeta Sanmiguel Valderrama,Kia,Sorento,2003,3,0
+HBX-3620,7433544775482,Godofredo Frías Marti,Toyota,Corolla,2010,5,1
+HBY-4404,6812396983279,Leopoldo de Piña,Hyundai,Santa Fe,2017,3,0
+HCK-1601,8367234893478,Geraldo Pareja Olivera,Mazda,6,2015,2,2
+HDQ-9313,1359048440769,Edmundo Batalla Haro,Kia,Sportage,2002,4,2
+HDR-4067,6392608126490,Dora Alemany Rios,Kia,Sorento,1996,5,2
+HEZ-5709,6372667985680,Edelmiro de Casas,Toyota,Hilux,2001,0,2
+HGQ-2960,5237103137740,Hilda Haro Pallarès,Honda,CR-V,2001,5,2
+HHN-0568,6568323475066,Rosario Leiva Méndez,Hyundai,Tucson,2005,5,3
+HIU-3349,4837591336988,Lupita Mur,Honda,Fit,1996,3,2
+HJB-7688,3661772745926,Florencio Manso Torrijos,Toyota,Yaris,2020,2,0
+HJE-6532,5215463633881,Carla Piñol Calderon,Hyundai,Tucson,2015,1,0
+HLM-6001,2332253573374,Pelayo Vilar Sosa,Honda,Civic,2010,5,0
+HLS-2187,6906952050463,América Alemany Rodrigo,Kia,Sportage,2011,5,0
+HOC-5062,3987862230618,Juan Bautista Ayala Piquer,Mazda,6,2008,2,1
+HPA-5000,3951553828247,Ágata Paz Barroso,Toyota,Yaris,2003,2,2
+HPF-8253,3754522519152,Noa Ribas-Baeza,Toyota,Corolla,2001,3,3
+HQI-0518,3325928380730,Luciana Noa Rico Rodríguez,Toyota,Corolla,2007,3,2
+HRH-2894,5850816099230,Adelia María Carmen Casares Rozas,Honda,Accord,2008,3,3
+HRN-4841,9934220638637,Fortunato de Sierra,Mazda,6,2020,0,3
+HRN-8735,6998725347961,Filomena Gálvez Haro,Hyundai,Accent,2002,4,1
+HSI-8672,3797201788858,Nacho Ariza,Honda,CR-V,2008,1,0
+HTK-8891,6596366029942,Aureliano Berenguer,Mazda,CX-5,1997,2,3
+HUI-8318,4064665917575,Anna Baeza Sureda,Hyundai,Accent,2010,1,3
+HUK-3382,5945241496234,Ruth Noguera,Mazda,CX-5,1998,5,0
+HUM-8239,6996649207664,Teresita de Cerro,Mazda,6,2004,4,1
+HVQ-3800,3123276447454,Lucio de Coello,Toyota,Hilux,1995,5,2
+HVS-3427,2868050406393,Cleto Expósito Peral,Hyundai,Santa Fe,2007,3,3
+HXI-0555,8737486774109,Rosa María Parra,Mazda,BT-50,2004,4,1
+HYV-6661,6397819597268,Hipólito Fuente Pons,Hyundai,Elantra,1997,4,3
+HZY-0233,4319525057083,Cristóbal Sanabria Pozo,Honda,Fit,2021,1,1
+IAE-0085,7698405293366,Carlota Farré Vigil,Kia,Sportage,1999,5,0
+IBE-0710,3178069718646,Josué Palau Pedrosa,Honda,Accord,2000,5,2
+IBS-8760,5443433217405,Teo Parejo Jaén,Mazda,CX-5,2012,4,0
+IBY-2796,7932710894785,Amaya Salinas,Mazda,CX-5,2023,3,2
+ICO-3898,7611507322551,Joel González Bauzà,Toyota,Hilux,2019,3,2
+ICT-8442,5805971911406,Liliana Hernando Cueto,Kia,Picanto,2012,0,0
+IDQ-6005,7077056779823,Teobaldo Pla Jordá,Kia,Sorento,2012,3,2
+IDX-0259,6882846205613,Ariel Barranco Madrid,Kia,Rio,2013,3,2
+IEF-1035,8266246813503,Isaías Azorin Madrigal,Toyota,Hilux,2015,2,1
+IEP-1859,5536335012971,Isa de Ricart,Hyundai,Santa Fe,2000,0,2
+IFQ-1658,4362807185539,Amaya Ballesteros Garay,Hyundai,Accent,2003,5,1
+IGI-3820,9483124914040,Vilma Valero Fortuny,Hyundai,Elantra,2017,0,1
+IGI-7838,4020497966673,Nicolasa García Machado,Honda,Civic,2007,5,2
+IIX-6088,9601281068693,Martirio Madrid Escolano,Hyundai,Accent,1996,4,3
+INN-7412,2117943160142,Palmira Peñalver,Kia,Picanto,2017,4,0
+IOH-4686,8941916413203,Lázaro Montalbán Huguet,Hyundai,Accent,2000,5,1
+IPV-3174,1356573248632,Ruperta Zamora,Kia,Sorento,2008,4,2
+IQD-8824,5258137649241,Estrella Solera Valle,Mazda,3,2003,5,3
+IQF-2685,2840948808687,Rebeca Balaguer Herranz,Toyota,RAV4,2024,1,0
+IQM-3975,4451649185833,Donato Pedraza-Mas,Kia,Sportage,2012,3,0
+IQO-4128,3558631688514,Domingo Alsina-Soriano,Mazda,3,2010,0,0
+IQU-2602,8468390385249,Marc Ruy Feliu Silva,Kia,Rio,2009,4,2
+IQW-7271,2157437044811,América Gonzalez,Mazda,BT-50,2018,1,1
+IRH-0014,4180402476982,Jose Ramón Gras Antúnez,Toyota,Corolla,1996,4,0
+IRS-7568,3315442318701,Joaquín Isern Talavera,Honda,Accord,2009,4,0
+ISA-1569,4702999187041,Carmela Manso,Honda,CR-V,2006,5,2
+IUZ-0702,1533261100927,Oriana Tur Vilanova,Kia,Sportage,2018,3,0
+IWD-9015,9021276670094,Cintia Bermúdez Sureda,Kia,Rio,2023,2,3
+IWH-0069,9829396101225,Adelardo Blanes Bermudez,Hyundai,Tucson,2017,4,3
+IWL-1236,2514083376277,Fulgencio Leonardo Medina Calvet,Mazda,3,2014,1,0
+IWZ-7756,1441058522182,Felicidad Juliá-Robles,Mazda,BT-50,2016,4,1
+IXR-9700,6460748753952,Lisandro Grau Robles,Honda,CR-V,2019,3,0
+IYI-6018,2003587091256,Wilfredo de Casals,Mazda,3,2023,2,1
+IYR-4053,3407819076661,José Ángel Núñez-Goñi,Mazda,6,2024,2,2
+IZY-3215,3684274752496,Estefanía Cerdán Bonilla,Mazda,6,2005,1,1
+JAB-9632,2181787446285,Bernardino Baltasar Quesada Roselló,Hyundai,Tucson,2009,0,2
+JBE-6957,9527164892016,Octavio Vázquez Roura,Hyundai,Tucson,2017,5,2
+JCI-8846,4166621836271,Adelaida Campoy Santiago,Kia,Picanto,2009,4,2
+JDN-0139,8618879323741,Concepción Felisa Campos Cuéllar,Kia,Rio,2007,2,2
+JED-1367,7052898266684,Celso de Puga,Honda,CR-V,2023,0,2
+JEI-0604,9515309456984,Régulo Fortuny Mariño,Toyota,RAV4,1998,3,0
+JEL-1446,5455645655926,Macarena Andrade Fortuny,Toyota,Corolla,2002,3,3
+JEL-8934,6053425942513,Paola Castell Haro,Hyundai,Elantra,2013,5,1
+JEZ-3283,6007919085151,Emiliano Galan-Rincón,Kia,Sportage,2020,2,3
+JFI-5587,7177172320567,Eugenio Severiano Badía Blázquez,Honda,Fit,2006,3,0
+JFN-1935,6855190293865,Alejo Fermín Torrijos Armengol,Kia,Sorento,2017,5,2
+JFO-6898,7038837916978,Amaro Bernat-Vicens,Hyundai,Tucson,2013,1,0
+JHN-7016,8560551547835,Félix Cuadrado Benavent,Honda,CR-V,1995,4,1
+JHQ-0832,5954803203791,Victoriano Alonso Cifuentes,Kia,Rio,2002,4,1
+JII-8029,8751156501664,Eric Ribas Vilanova,Kia,Rio,2006,5,2
+JIX-2866,6674359777858,Diego Hierro Salgado,Hyundai,Elantra,2009,2,0
+JJA-7061,6785862810625,Natalia Capdevila Solsona,Mazda,3,2021,1,3
+JJP-7823,8791441283504,Isaías Carpio Linares,Honda,CR-V,2004,3,0
+JKI-1128,5161576505500,Beatriz Cervantes Corbacho,Hyundai,Elantra,2024,5,2
+JKK-3507,2574463278333,Asdrubal Barroso Alcalá,Hyundai,Accent,1999,1,1
+JLS-3814,2421886209307,Modesto Suarez,Toyota,RAV4,1995,3,1
+JMA-2794,8923308688730,Jose Miguel Vives Bauzà,Kia,Sportage,2010,5,3
+JMU-5797,8749332331759,Desiderio Pánfilo Hernando Torres,Mazda,3,2019,3,1
+JOA-6290,6577821007687,Aroa Riquelme Cuadrado,Honda,Fit,1997,2,0
+JPL-1598,4183829696630,Aurelia de Saez,Toyota,Hilux,2000,2,3
+JQX-9731,2202532729605,Sandalio José Luis Rodrigo Aragonés,Mazda,CX-5,1996,2,2
+JRC-1373,8672041263236,Osvaldo Nando Gonzalo Solana,Mazda,BT-50,2017,1,0
+JRF-1551,5759412046685,Benjamín Escudero,Mazda,3,2012,0,1
+JSC-9175,6940841352389,Maximiliano Arteaga Castellanos,Kia,Sorento,2014,0,0
+JSQ-3493,8954493331235,Amaro Perea Olivé,Hyundai,Accent,2014,2,0
+JTF-3864,6706054530587,Albert Feijoo,Kia,Sorento,2009,2,3
+JTT-2459,6304573260338,Xavier Roura-Saura,Mazda,BT-50,2022,0,3
+JTV-8602,6719191864286,Noé Folch Barragán,Mazda,CX-5,2004,5,3
+JTX-8094,3329081123610,Fabiola Vila Revilla,Hyundai,Elantra,1996,4,2
+JUI-5362,8599833623641,Rebeca Calleja Sáenz,Toyota,RAV4,2000,1,0
+JUL-7110,5490045080194,Herberto Eugenio Rivero Ortega,Honda,Civic,2002,0,0
+JVW-5191,8472054741736,Esperanza del Díaz,Honda,Civic,2005,4,3
+JWL-4760,1291351583785,Irene Noguera Arco,Honda,CR-V,2017,5,0
+JXP-3389,5230504292613,Loida Pérez Mayol,Honda,Civic,2020,5,0
+JXP-6497,4707335835410,Javiera Valcárcel Martorell,Honda,Civic,2022,5,2
+JZY-3574,8093086847077,Roberta Codina Elorza,Hyundai,Tucson,2010,4,2
+JZY-5385,2635197396949,Ana Belén Enríquez Gelabert,Mazda,BT-50,2003,5,0
+JZZ-3400,8082314122288,Teresita de Collado,Hyundai,Tucson,2023,5,2
+KBH-6726,6897179517623,Leopoldo Núñez Medina,Toyota,RAV4,1997,5,0
+KCS-6397,5376379255645,Hernán Villalonga Alcolea,Kia,Rio,2014,2,2
+KEY-0405,8044285188770,Ámbar Andrade Elorza,Kia,Rio,2018,5,3
+KEZ-6669,7327304887853,Evelia Poza Vilaplana,Kia,Rio,2008,2,2
+KFK-9679,2061653281516,Rosendo Íñigo Esparza Meléndez,Hyundai,Santa Fe,2009,0,2
+KFY-3322,3184231857889,Cayetano Leon Mata,Kia,Picanto,2003,2,1
+KGI-3504,4591127273440,Mireia Cantón Meléndez,Hyundai,Elantra,2003,0,0
+KGV-2029,3834657434120,Caridad Frutos-Huertas,Toyota,Yaris,1998,3,2
+KHE-6201,9734459137641,Agapito de Gordillo,Kia,Sorento,2015,4,3
+KIF-4778,2572372735754,Araceli Anguita Cabañas,Kia,Sportage,1995,3,2
+KIG-0493,3445210865009,Olimpia Tolosa,Hyundai,Santa Fe,1996,5,3
+KIP-4006,1702352223318,Balduino Gárate Iborra,Kia,Sportage,2022,5,3
+KIX-4895,6909574866729,Tiburcio Malo López,Honda,Accord,2009,5,3
+KMH-9951,7946216927575,Miriam del Torralba,Hyundai,Accent,2001,0,2
+KMT-4072,1456349940391,Adelia Piquer,Hyundai,Tucson,2021,1,0
+KMU-3112,5814100026629,Chus Benita Sedano Márquez,Honda,Fit,2002,4,1
+KNL-5317,4601676363802,Matilde Figueras-Agustín,Mazda,3,2000,2,2
+KNW-0832,9506647380958,Eleuterio Vidal,Hyundai,Tucson,2010,3,3
+KNY-4505,7942476494573,Juan José de Ávila,Hyundai,Accent,2001,5,0
+KOD-0639,8719711043384,Marianela Rodriguez Rey,Honda,Accord,2002,1,0
+KOH-4660,2912204454438,Maura Elorza-Cobo,Toyota,RAV4,2007,1,0
+KPQ-2487,7837013913580,Manu Leal Aguirre,Honda,Accord,2013,2,2
+KTZ-5656,5246869639805,Ambrosio Mateo Barón,Hyundai,Tucson,2019,0,2
+KUH-8188,4424722063860,Julia Vargas Yuste,Toyota,RAV4,2003,4,1
+KVK-5093,1353206265870,Carmen Vilanova-Mena,Kia,Picanto,1998,1,2
+KVW-3394,4139801087183,Elba Mateu Mayol,Kia,Sorento,2003,2,3
+KXX-2704,6958199123616,Rodrigo Acosta,Honda,Fit,2015,5,0
+KYC-3343,3928468803942,Vilma del Machado,Hyundai,Santa Fe,2010,2,1
+KYS-6265,4743619375262,Blanca Garzón Montaña,Kia,Picanto,2001,3,3
+KYW-3083,6679195020186,Fabricio Millán-Jara,Hyundai,Elantra,2023,5,3
+KYZ-5053,8542207217962,Leyre Barón Casado,Mazda,6,1998,5,1
+KZR-1847,9186535222206,Amílcar Benavides Fuertes,Toyota,Hilux,2007,3,3
+LBG-2453,7608432339658,Eligia Blanca Clavero Mora,Toyota,Yaris,2007,0,1
+LCP-4377,5263562403612,Ciriaco Chuy Bautista Chaparro,Honda,CR-V,2018,2,1
+LDS-0224,1158540923874,Irma Sebastián-Vega,Toyota,RAV4,2023,4,3
+LED-8751,4259137060356,Edgardo María Almazán Huerta,Mazda,6,2015,4,1
+LEY-6853,9050212937457,Loreto Rosendo Vila Santamaría,Toyota,Hilux,2012,5,1
+LFJ-1634,4572854032472,Valeria Folch,Kia,Picanto,2001,2,2
+LFO-7708,6190423302128,Trinidad Rincón,Honda,Accord,2015,3,3
+LGH-5441,8840008471817,Asunción de Agustí,Mazda,CX-5,1995,0,0
+LGI-0298,5355219421349,Borja Marí Enríquez,Hyundai,Elantra,2022,1,0
+LIV-9994,7691318459841,Eloísa Martin Nevado,Honda,Accord,2009,5,3
+LKZ-1596,5257152311701,Baudelio Pla Castañeda,Toyota,RAV4,1995,1,1
+LLZ-4988,6662586614634,Carmen Duran Hernandez,Toyota,RAV4,2001,2,2
+LMO-9536,2302775383613,Etelvina Tamayo Falcó,Mazda,3,2007,1,1
+LOE-2897,7015680868131,Concepción Lara Arenas,Hyundai,Elantra,2017,5,2
+LOE-5461,6599756309927,Joaquina Antúnez,Toyota,Corolla,2004,1,1
+LOJ-7957,1813342602631,Marcia Piñeiro Galan,Toyota,RAV4,1995,1,1
+LPC-0157,7376104893098,Domitila Vidal Guardiola,Hyundai,Accent,2007,4,1
+LPD-6688,2548836827194,Cloe Vilaplana Torrent,Mazda,6,1997,5,1
+LQT-6081,4768891239768,Amaro Giralt,Hyundai,Elantra,2001,1,0
+LQW-6138,5013293961673,Estela del Coca,Hyundai,Accent,2008,5,2
+LRS-6157,1293852926656,Sosimo Cabezas Montaña,Honda,Accord,2012,4,0
+LRW-3606,5928199162218,Manuela Urrutia-Madrigal,Hyundai,Elantra,1998,5,2
+LTS-4496,1039816727393,Salvador Bárcena Salas,Hyundai,Elantra,2020,5,3
+LUJ-1826,5795361072627,Jordana Cabañas Francisco,Kia,Sorento,2016,5,2
+LUL-0490,3874662263865,Luisina Camps Rius,Toyota,RAV4,1998,3,1
+LUM-6235,3981549007557,Reyes Álamo-Polo,Kia,Rio,2024,1,0
+LUU-4134,8501907781295,Tamara de Mosquera,Hyundai,Accent,2001,4,2
+LVY-7143,3337754336422,Ema Quintanilla,Toyota,Corolla,1995,3,1
+LWE-3609,2621564453374,Asdrubal Plaza Escribano,Hyundai,Elantra,2007,1,0
+LZL-2112,7826612058568,Isaura Fábregas Losa,Mazda,BT-50,2008,0,1
+MAO-8767,8714384859437,Gaspar Esteban Garcia Gaya,Toyota,Corolla,1999,3,1
+MAR-7338,6425672729157,Fátima de España,Honda,Civic,2013,4,0
+MCM-6535,4073746392925,Micaela Lobato,Kia,Sportage,1996,4,0
+MCZ-4425,3240450745999,Eufemia Haro Solano,Kia,Picanto,1999,2,0
+MDK-5100,3193644715809,Rocío de Sureda,Mazda,3,2002,5,3
+MEO-1252,5578206446332,Lucas Cid Bustos,Hyundai,Santa Fe,1999,5,2
+MET-3288,9411497312580,Morena Lara Anglada,Mazda,6,2013,5,1
+MEY-1921,1235880516178,Severiano Cáceres Esparza,Toyota,Yaris,2016,2,2
+MEY-9155,7333819056264,Loreto Llobet Gonzalez,Kia,Sportage,2002,3,0
+MFB-6469,2475859929104,Leire Fábregas Romeu,Mazda,BT-50,2022,2,2
+MFF-9753,3151599211876,Isidora Soriano-Mesa,Honda,Fit,2004,2,0
+MFL-1074,5763981256726,Cristian Dalmau Aragonés,Kia,Sorento,2007,3,1
+MFZ-5029,2073616596325,Paulina Vázquez Águila,Honda,CR-V,2011,4,3
+MIF-8892,6127132409403,Carlos Cazorla,Kia,Picanto,2021,1,0
+MIM-0701,1563346161361,Teresa de Carpio,Toyota,RAV4,2015,2,0
+MIN-4601,7251544861609,Francisco Blanco Tudela,Kia,Rio,1997,3,1
+MJD-1768,9126458405245,Aitana Alfaro Neira,Toyota,Yaris,2015,1,3
+MJF-1086,7865665810428,Baldomero Sevillano Vázquez,Kia,Sorento,2019,1,2
+MJL-0257,8085784898562,Eustaquio Palacio Bru,Mazda,BT-50,2013,1,2
+MJM-1358,8890249374421,Arsenio Manso Casanovas,Mazda,CX-5,2002,3,0
+MLB-9631,6693969881876,Danilo García Barranco,Kia,Sorento,1996,1,1
+MLF-0960,8013744901325,Estela Rosell Castejón,Mazda,BT-50,2011,4,3
+MMM-1852,7465432698779,Virgilio Adán-Manuel,Honda,Accord,2006,0,1
+MNE-1583,7129920309725,José Mari Caballero-Mur,Honda,CR-V,2021,0,1
+MOL-9344,5386173548053,Eustaquio Guerra Amo,Hyundai,Tucson,2004,1,3
+MPS-5422,2138887862660,Elodia Marqués Lillo,Honda,Accord,2009,5,0
+MPY-7057,4346852289905,Gil Salas Manzanares,Kia,Rio,2018,1,3
+MPZ-8993,3348922216990,Áurea Sáez-Palau,Toyota,Hilux,2004,2,2
+MQB-5248,7664302597865,Cristina Ainoa Peláez Piñol,Hyundai,Accent,2013,4,2
+MRC-3083,1354824092125,Tatiana Casals Cases,Honda,Civic,2001,3,3
+MSC-5444,7105841181572,Melania Catalá Mulet,Hyundai,Accent,2009,3,3
+MTZ-6556,2323601965966,Carmen Reyes Arribas,Hyundai,Tucson,2017,4,1
+MUN-9827,7605311323348,Heraclio Piñeiro Ropero,Mazda,BT-50,2003,0,2
+MUZ-7772,9959385292904,Cristóbal del Morera,Honda,Accord,2021,2,2
+MVA-0070,5829848637431,Elisa Mariscal Báez,Toyota,Corolla,1998,5,1
+MWF-0824,2148224251886,Jose Cebrián Costa Piquer,Hyundai,Santa Fe,2019,4,3
+MWX-3356,7392683613741,Asdrubal Diego Requena,Mazda,BT-50,2003,2,0
+MWZ-1961,3291280339743,Eric Quirós Martínez,Hyundai,Accent,2003,2,1
+MXD-0925,9994761003038,Silvio Vera Báez,Mazda,6,2016,2,2
+MYB-5995,5162332361549,Marcos Ruiz Montaña,Mazda,6,2017,5,2
+MYU-4115,6076963644317,Reyes Casado,Hyundai,Accent,2023,0,3
+MZM-9763,8914430321637,Lupita Aragonés Taboada,Toyota,Hilux,2019,2,2
+NAA-8841,9566896174823,Alexandra Sedano Ureña,Kia,Sportage,2013,0,0
+NAD-6732,3157740244671,Ambrosio de Tejedor,Kia,Picanto,2024,2,0
+NBA-7953,4903993738360,Chuy Reynaldo Padilla Marqués,Toyota,RAV4,2021,5,2
+NBA-8489,4215902743499,Agustín Valero Coll,Kia,Picanto,2004,0,0
+NBL-6967,6546974935467,Che Beltran Crespo,Hyundai,Tucson,2013,4,3
+NBR-9443,1517090271456,Ligia Batlle Madrigal,Honda,CR-V,2011,1,0
+NCL-2076,8178525224429,Vito Ferreras Pina,Toyota,Yaris,2010,4,0
+NCM-5993,2132858634735,Soraya Jerez Mayol,Mazda,3,2021,3,1
+NCW-4527,2234148833168,Marisela Sáez Heras,Hyundai,Tucson,2020,3,2
+NDU-8920,7142689058974,Reyna de Ponce,Hyundai,Tucson,2005,4,2
+NEA-3564,7158288940529,Nilo Zorrilla Herrera,Toyota,Corolla,2000,1,3
+NEH-2486,5456139724271,Adelina Valcárcel-Bou,Hyundai,Accent,1999,4,2
+NFQ-9187,4769649302384,Atilio Ballester Villar,Kia,Rio,1995,1,1
+NGB-7297,3403265974025,Benito Sola,Kia,Sportage,2016,5,0
+NGK-5123,9168672708347,María Ángeles Corominas-Tormo,Toyota,Hilux,2011,0,1
+NHF-8447,9994979997965,Felipa Marí Coronado,Hyundai,Tucson,2019,3,3
+NHP-4414,9641384519664,Fabiola Oliveras Verdejo,Hyundai,Santa Fe,2023,0,1
+NJR-1456,4575374759896,Juanito Pintor Gual,Honda,Accord,2011,5,0
+NJU-4054,4946998526477,Prudencia Valbuena Marín,Honda,CR-V,2011,1,0
+NKV-9122,6571802283046,Vilma Flores Luz,Kia,Picanto,2019,3,0
+NMT-0656,2238068475046,Sara Andres Pablo,Kia,Picanto,2014,1,3
+NNB-7813,8508772111260,Pascual Reina Robledo,Honda,CR-V,1998,5,1
+NNZ-8505,3634741912675,Haroldo de Jiménez,Toyota,RAV4,2023,1,1
+NOF-1212,4819536323927,Silvestre Sevilla Suárez,Hyundai,Tucson,2011,1,3
+NOG-1155,7345698412554,Ariel Barrio Calderon,Kia,Rio,2020,2,3
+NOK-1860,5361713318813,Cecilio del Arnaiz,Hyundai,Santa Fe,2017,3,0
+NOM-8843,1689511215064,Anselma Mar Robles Blanes,Honda,CR-V,2022,1,2
+NPN-0306,6030371308131,Pancho Torrijos Guerra,Honda,CR-V,2021,1,2
+NSX-3608,2900263259431,Melchor Ortiz Juliá,Kia,Sorento,2011,0,3
+NUN-7962,6265078631350,Concha Villalonga,Kia,Sportage,2011,4,2
+NUW-1784,8793414536474,Jordana Barrios Garriga,Honda,Civic,2001,5,1
+NWN-6505,3568902063171,Teodora Joaquina Carrillo Almazán,Mazda,6,2020,4,1
+NWU-5559,8910366358110,Irene Mate-Alcaraz,Toyota,Yaris,2006,2,2
+NXL-8528,1799683001699,Charo Pozuelo Cardona,Mazda,3,2009,3,0
+NXX-3829,1867454956394,Tiburcio Ariza,Honda,Civic,2004,5,3
+NYR-5486,9412283232691,Casemiro Ferrando Falcó,Toyota,Yaris,2002,2,1
+OBH-1482,8844883345630,Rosalina Rosselló Mayo,Kia,Picanto,2017,3,0
+OBL-9827,5725234332029,Eulalia Vives Canet,Kia,Picanto,1996,3,3
+OBQ-1914,7366909480457,Jorge Hervás Dueñas,Toyota,RAV4,2024,1,1
+OBS-4159,7264157742130,Sol Esteve Campoy,Mazda,6,1998,5,1
+OBY-3224,3331060119819,Roberta del Uría,Honda,Civic,2013,2,0
+OCZ-3426,4035551286501,Reyna Ferrer Benavente,Mazda,6,1996,1,2
+ODY-4574,9933633853267,Sara Calvo Jáuregui,Hyundai,Elantra,2014,0,3
+OEJ-8820,4703157653314,Eduardo Sabater Antúnez,Kia,Picanto,2020,5,1
+OEN-5826,9739479457144,Edelmira Arellano-Fonseca,Honda,Accord,1998,0,0
+OFD-7902,5313553123068,Javiera Perelló Benet,Toyota,RAV4,2013,4,1
+OIB-5326,1976278830337,Juan Carlos Ureña,Mazda,6,2018,2,1
+OIS-4258,5607804500037,Carmelita Rosales Morera,Hyundai,Elantra,2023,3,2
+OKH-7577,5641913128916,Irene Manuel Morante,Kia,Sorento,2013,0,2
+OKU-1955,9845502611799,Fausto Lara Castilla,Hyundai,Santa Fe,2016,4,2
+OLD-6151,9321256223920,Ramón de Conde,Mazda,BT-50,1998,4,1
+OLM-0901,2278380121151,Amado Adadia Vila,Kia,Rio,2004,0,0
+OLT-7152,7215811969354,Marisa Cabrera Salinas,Hyundai,Accent,2000,5,3
+OML-9723,6373669464502,Toribio Dani Agudo Pardo,Mazda,BT-50,2019,5,2
+OMT-5291,3347699069371,Clementina Ros Iglesias,Hyundai,Tucson,2010,4,2
+ONS-3651,5028856133356,Agustín Jara Puente,Toyota,Hilux,1998,1,1
+ONY-0268,1221016369513,Jonatan Estrada Niño,Toyota,Yaris,2022,4,2
+OOK-9650,7525287545946,Juliana del Pedrero,Mazda,6,1997,0,1
+ORZ-9501,7976008934694,Raquel Mena Frutos,Toyota,Corolla,2010,3,0
+OSO-1077,8706108561232,Joan Morell Corominas,Hyundai,Santa Fe,1998,5,2
+OTG-4848,7601147651560,Fermín Vilaplana Pizarro,Toyota,Corolla,1998,1,0
+OUT-4045,7061090352867,Yésica Tomé-Morata,Toyota,Hilux,2024,0,0
+OUV-8077,9076690705805,Santiago Tovar Amores,Toyota,RAV4,2021,0,2
+OVH-7320,8323425144267,Azahara Camacho Clavero,Toyota,Corolla,1996,5,3
+OWN-4724,5860475510842,Bibiana Sotelo Téllez,Honda,Fit,2010,2,1
+OWQ-8057,7356954056709,Fanny Reina Izquierdo,Toyota,Hilux,2022,2,0
+OXG-0476,5806031148020,Carlota Vazquez Cabezas,Toyota,Hilux,2023,5,1
+OXP-9405,1962833081836,Bernabé Artigas Moll,Kia,Sorento,1996,1,3
+OZO-0501,6573470099806,Malena Ochoa-Ballesteros,Mazda,6,2019,0,3
+OZR-6694,5109892605299,María Carmen Gómez-Sevilla,Mazda,CX-5,1997,3,1
+OZY-7269,9048359366345,Crescencia Figueras Barrio,Honda,CR-V,2005,0,0
+PBV-9142,1863544575520,Ismael Cardona,Kia,Sportage,1998,3,0
+PBX-4995,2360618148384,Edu Nicolau Fajardo,Toyota,Corolla,2003,3,3
+PCH-7262,8230322800935,Piedad Arellano Vicens,Toyota,Hilux,2009,4,0
+PCM-0330,5403359433922,Ruy Pinilla Márquez,Honda,CR-V,2024,5,0
+PDN-2303,8042806783808,Juan Francisco Cal Bautista,Kia,Rio,2024,0,0
+PDT-7734,2831447451404,Ruben de Olmo,Honda,Accord,2011,1,2
+PEA-0025,1380256660753,Rómulo Barrena Peña,Hyundai,Elantra,2003,2,3
+PEG-8728,1617359141165,Lucas Garmendia-Anglada,Honda,Civic,2024,5,2
+PEJ-5314,1831000922290,Pepita Cabrero Bartolomé,Hyundai,Tucson,1997,5,3
+PER-0816,6317934395432,Trinidad Blas Pablo Morcillo,Toyota,RAV4,1995,1,1
+PFO-3070,2669461666340,Viviana Girón Torrents,Toyota,RAV4,2019,1,0
+PHC-2220,6591982627872,Natanael Capdevila Pagès,Kia,Picanto,2006,4,2
+PIC-8314,2212301356318,Soraya Romero Zabala,Kia,Sportage,2017,3,0
+PIM-0264,2139074265244,Gertrudis Almazán Barrio,Honda,Civic,2021,1,0
+PJP-7597,1649309878563,Aarón Frías,Toyota,Yaris,2012,4,1
+PLE-6125,3767975439740,Elisa Garmendia Cañete,Toyota,RAV4,2000,3,1
+PMB-4816,3021467584265,Flavio Jordá,Honda,CR-V,2020,3,0
+PMK-9106,3831770187437,Juliana Ani Múñiz Mesa,Kia,Rio,2021,5,0
+PMY-0068,8333391187733,Melania Ortuño Dueñas,Kia,Sorento,1998,4,0
+PNA-8128,2678162775929,Piedad del Calatayud,Toyota,Hilux,2020,0,3
+PPI-1100,7408498215938,Domingo Soriano Aguiló,Kia,Sorento,2014,2,3
+PQE-6022,8552790308834,María Luisa Agudo Uribe,Kia,Sorento,2004,4,2
+PQL-3765,6834536458992,Olivia Mercader,Hyundai,Elantra,2016,3,2
+PQR-0000,2009159933649,José Luis Vazquez-Salgado,Toyota,Corolla,2014,0,0
+PQW-9406,8593773923766,Hilda del Garcia,Hyundai,Santa Fe,2012,0,1
+PRM-6199,9947718029504,Javi Coll Díez,Toyota,Hilux,1999,5,2
+PSM-8569,4880155167141,Rafa Azorin Nebot,Honda,Accord,1997,1,3
+PSW-9938,5253646865295,Rodolfo Folch Pablo,Hyundai,Elantra,2014,3,3
+PSZ-0746,9013361951501,Luz Diego Tamarit,Kia,Sorento,2019,0,2
+PUV-0547,1595808575504,Dimas Caro-Solera,Honda,CR-V,2022,2,1
+PVT-8397,6419763740947,Seve Bastida Azcona,Honda,Civic,2007,2,1
+PWH-0737,8315244030719,Luz Alfonso Sanz,Honda,Fit,2011,3,3
+PWR-5896,5118780085790,Chita Borrás Español,Hyundai,Elantra,2020,1,2
+PXK-5514,5707246236720,Cipriano Amor Durán,Hyundai,Santa Fe,2019,3,2
+PXS-3046,6554941050883,Milagros del Cánovas,Toyota,Yaris,1998,4,1
+PYB-8148,4905370225867,Angelita Vendrell Sobrino,Hyundai,Tucson,2004,3,2
+PYL-1788,4680491033778,Calixta Vazquez Medina,Mazda,3,2000,0,2
+PYM-3244,4537227809641,Armando Feliu Blazquez,Honda,Civic,2024,4,2
+PYU-4244,9237377413226,Reina Cayetana Hierro Núñez,Toyota,RAV4,2004,4,3
+QBB-8364,1361050814078,Celestino Porras Gallo,Mazda,3,2011,3,0
+QBY-8828,2311320487497,Zacarías Echeverría,Honda,Civic,1996,4,2
+QCH-1826,4645023387036,Ester Quesada Menendez,Toyota,RAV4,2009,1,1
+QCP-2667,8690831412015,Obdulia Ojeda Angulo,Honda,Accord,2008,3,3
+QDB-1778,5967273038389,Catalina de Bou,Honda,Civic,1995,2,3
+QDG-3828,2780863574038,Marcelino Vigil-Bru,Kia,Sportage,2012,0,0
+QDV-0115,5649950944247,Juan Pablo Samper Cuadrado,Kia,Sportage,2006,5,3
+QFR-7367,2216286614015,Adán Fonseca Castelló,Honda,Fit,1999,5,0
+QFW-8965,3687714963873,Eva Riera Andrade,Kia,Sorento,2007,0,3
+QIP-4206,1550181674707,Leyre Cloe Aragón Carrera,Kia,Rio,2008,2,3
+QKK-3588,1085090275563,Estefanía Charo Figueroa Cabañas,Hyundai,Tucson,2006,5,0
+QKQ-8102,2882781811859,Cristóbal Benavides Garriga,Honda,Accord,1996,2,3
+QKS-1003,5839340939203,Tito Saez Terrón,Honda,Fit,2014,4,2
+QLR-6277,4969537119218,Ana Tenorio Borrás,Honda,Civic,2000,5,3
+QLY-3039,8017183551624,Yolanda Manrique Francisco,Toyota,Corolla,2002,0,1
+QMB-8793,6218930766076,Graciano Márquez Iñiguez,Mazda,BT-50,1997,4,1
+QMH-0618,6405592816789,Luciana de Sotelo,Honda,Fit,2018,0,3
+QNL-1527,4084125336563,Cecilia Parra Blanca,Honda,Accord,2011,1,2
+QPG-3622,4779734500787,Lilia Acero Llano,Toyota,Yaris,1998,0,3
+QPU-6370,1124164279015,Porfirio Pina Sanmartín,Toyota,Hilux,2007,2,0
+QPV-3491,2045172437122,Olimpia del Bayo,Hyundai,Accent,2015,0,1
+QQR-5924,4163692551167,Rosalinda Carreño Acevedo,Honda,Accord,1996,1,0
+QQS-4563,8957741832343,Asunción Huguet Esparza,Hyundai,Tucson,2001,4,3
+QRW-4589,4377432206224,Genoveva Espada Pinedo,Mazda,BT-50,2010,0,2
+QSG-2782,9523655216964,Iris Aguado Alsina,Honda,CR-V,2005,4,2
+QSV-0508,8036728133572,Graciano Yáñez-Villena,Honda,Fit,1996,4,2
+QTG-4316,3615533411025,Sara Bustos Ureña,Honda,Civic,2001,2,0
+QTU-1418,7463177523345,Amarilis Taboada-Almansa,Kia,Sorento,2023,2,3
+QTY-5666,5774025184307,Anselmo Morillo Laguna,Kia,Sportage,2008,1,1
+QUF-9882,4450034280391,Jose Manuel Juliá-Serna,Kia,Sorento,2017,2,3
+QVC-6860,7327896852312,Maura Corominas Pineda,Mazda,3,2010,3,1
+QVY-8178,9366394989322,Emiliano Abascal Montero,Honda,CR-V,2009,3,0
+QXT-4181,8723019733387,Porfirio Saturnino Puente Vélez,Mazda,CX-5,2004,4,0
+QXY-9386,6778225307717,Jacobo Piñeiro Villar,Hyundai,Elantra,1999,2,2
+QZZ-5660,2608848723975,Mohamed Tejedor Carretero,Hyundai,Tucson,2009,3,1
+RAC-2981,2582070119355,René Rivera Abella,Hyundai,Tucson,2021,3,0
+RAN-2713,5054903114250,Eugenio Sans Grau,Hyundai,Accent,2017,1,2
+RBP-0223,3576800812071,Amílcar Llano-Sabater,Kia,Rio,2010,1,1
+RCM-9157,9551874113211,Luna Cabrero-Querol,Toyota,Yaris,2009,4,2
+RDL-7946,2389146835578,Pepito Fuster Amo,Hyundai,Accent,2002,3,0
+RDN-3482,5435656413683,Ernesto Verdejo,Mazda,BT-50,2007,0,2
+REE-1558,6813196494437,Yésica Herrero Pereira,Hyundai,Tucson,2020,3,3
+RES-6400,8752571265191,Salomón Villa Lillo,Kia,Picanto,2020,4,3
+REZ-5722,3430336732458,Juan Antonio de Heredia,Toyota,Hilux,2014,1,2
+RFA-9563,3924877363915,Amelia Clementina Balaguer Cuadrado,Hyundai,Santa Fe,2023,3,3
+RFH-2376,8502655306468,Victorino Hernán Raya Castells,Toyota,Hilux,1997,1,0
+RHL-8765,4413988155160,Ismael Caparrós-Landa,Kia,Picanto,2011,2,3
+RHN-0385,3495824395752,Cruz Méndez Marti,Hyundai,Accent,2008,4,0
+RID-9234,6791396977575,María Jesús Imelda Saldaña Conesa,Honda,Accord,2004,0,3
+RIT-1611,4816368045424,Luis Ángel del Carnero,Toyota,Hilux,2005,4,1
+RJI-2184,6154643444457,Nicodemo Villaverde López,Hyundai,Santa Fe,2003,4,2
+RJK-5128,9854175682746,Néstor Galindo Iniesta,Honda,Fit,2018,2,0
+RJK-7931,6480757040380,Jose Santos,Honda,Civic,2004,4,0
+RJX-7623,4005680684473,Brígida Cabanillas Ángel,Mazda,BT-50,2020,4,3
+RKR-1977,4368654306598,Calisto Melero,Mazda,BT-50,1999,1,3
+RLD-3129,2764731097569,Delia Barrena Montalbán,Honda,Accord,2007,3,1
+RLE-0451,8387592730942,Sabas Ismael Cerro Figuerola,Hyundai,Santa Fe,2020,0,0
+RLK-2403,6808340242227,Yago Garzón-Redondo,Kia,Sportage,1998,0,2
+RLN-1758,1202293858870,Gonzalo Tejedor Leiva,Toyota,RAV4,2003,1,3
+RMD-2907,2519382484005,Aristides Hurtado-Farré,Toyota,Yaris,2022,4,0
+RML-7738,6608643066928,Valerio Prudencio Rosales Granados,Kia,Sportage,2000,3,3
+RMN-6125,5204118243109,Nazario Aparicio Guardiola,Honda,Accord,2001,3,0
+RNM-5862,1844941018344,Calisto de Becerra,Toyota,Corolla,2018,2,1
+ROH-8814,5258936305854,Julia Soriano Guijarro,Hyundai,Accent,2008,4,3
+ROK-3900,4609851090785,América Sarmiento Bonet,Toyota,RAV4,2018,1,0
+RON-4329,7347677251970,Oriana Valenzuela Gallo,Honda,Civic,2020,2,2
+RQN-7202,3815303967378,Brunilda Montes Mayo,Honda,Fit,2000,3,3
+RRE-2217,8011185982868,Carina del Tomas,Hyundai,Elantra,2022,3,3
+RRI-3449,1472117784768,Calixto Vives-Terrón,Honda,Fit,2023,3,2
+RRR-8873,8057056155993,Arsenio Andreu,Mazda,BT-50,2014,1,1
+RTO-9711,8746239329250,Timoteo Mate Ureña,Hyundai,Tucson,2014,5,2
+RWL-7633,8512524741952,Teobaldo Tamayo Santos,Toyota,Yaris,2019,0,2
+RXH-6920,9369565785981,Severo Serna Piña,Mazda,3,2020,5,2
+RXI-8569,3534649472672,Isidro Serna,Mazda,6,2020,5,3
+RXU-0423,4487641953869,Abril Caro Rosado,Kia,Rio,2009,0,3
+RYD-9738,6560637490983,Manuel Reinaldo Cabrero Borrego,Toyota,Yaris,1996,3,1
+RYH-7859,6173609436664,Norberto Yuste Gárate,Mazda,CX-5,2013,1,1
+RZW-3006,7814200168674,Amaya Vilaplana Calvet,Hyundai,Santa Fe,2008,5,1
+RZY-6989,6676731380471,Sofía Jove Vives,Hyundai,Elantra,2010,4,3
+SAQ-8277,6648381284087,Luna Mulet Rodríguez,Hyundai,Accent,2022,1,3
+SCC-3300,5928739788629,Nilo Puga Cadenas,Honda,CR-V,2007,5,3
+SCI-3136,2439661657901,Celestino Bastida,Kia,Sportage,1995,5,2
+SCX-4953,2987351689737,Saturnino de Tapia,Honda,Accord,2017,2,1
+SDE-5336,3549386319452,Nazaret de Dávila,Mazda,CX-5,2007,5,3
+SEM-3138,8155917004688,Guiomar Bonet Prado,Kia,Sportage,1999,5,3
+SER-0164,9742063869914,Custodio Cal Arnal,Kia,Picanto,2018,3,0
+SFG-6568,4858720617924,Jordana Ferreras Fernández,Hyundai,Elantra,2004,5,3
+SFL-4130,4080474433833,Manuela Artigas Guardia,Honda,CR-V,2011,5,3
+SFX-8185,7813142719497,Nicolasa Godoy Aller,Honda,CR-V,1999,0,2
+SGK-7634,2690268970800,Malena Abella Cazorla,Mazda,BT-50,1997,0,1
+SHJ-6026,5713203880502,Josep Mendez Roldan,Hyundai,Santa Fe,2007,2,1
+SHZ-6645,9692078438322,Raquel Leiva Lerma,Mazda,BT-50,2013,5,1
+SIC-6425,4808990254169,Ricardo Checa Becerra,Toyota,Yaris,2022,2,0
+SIT-7987,9962480190926,Nico Carro Ricart,Toyota,RAV4,2000,2,0
+SIV-4245,5643804661142,Candelaria Estrella Escudero Diéguez,Honda,Fit,2012,1,1
+SJF-8417,5759808169764,Georgina Iris Cal Rosales,Kia,Sorento,2022,1,1
+SJV-2370,4627020324409,Arsenio Sebastian Bayo Rodriguez,Toyota,RAV4,2019,5,0
+SLR-2952,2986861458538,Anna Somoza Llopis,Kia,Sportage,2020,3,2
+SLU-3998,1630966062054,Ofelia Arce,Hyundai,Tucson,2022,5,0
+SLV-6420,2144774847648,Casemiro Pera Pavón,Honda,Accord,2002,2,1
+SLW-2213,3968995656217,Maite Villaverde Figueroa,Kia,Sportage,2012,1,1
+SLY-3730,3373030429328,Saturnina Llopis,Toyota,Hilux,2002,5,1
+SMG-4631,6680921746590,Eugenio Giménez Tirado,Honda,Civic,2017,5,3
+SMG-7351,8350620785242,Victor Manuel Tejada,Honda,Accord,2015,2,3
+SMT-1463,4291940729251,Julián Ramírez Escobar,Mazda,BT-50,1996,0,2
+SMX-9885,9606609388857,Paulina Regina Sedano Carbajo,Honda,CR-V,2000,5,0
+SNB-4731,6494829059156,Vera Lozano-Berenguer,Kia,Rio,2017,3,3
+SNJ-0191,3784304446891,Amaya Mate Laguna,Kia,Sorento,1999,2,3
+SOF-8914,6060334012873,Corona Alcázar Guardia,Hyundai,Elantra,2011,5,1
+SPD-5958,7558233593369,Mario Porfirio Conesa Arroyo,Kia,Rio,2022,5,3
+SPY-3536,3779663472772,Maximiliano Saldaña,Kia,Sportage,2006,1,1
+SSA-9162,8043639672344,Dominga Valenzuela-Iniesta,Kia,Sorento,2007,2,1
+SSJ-6703,2294123117712,Zaida del Zapata,Honda,Fit,2012,4,1
+SSR-7318,7559595500958,Calisto de Escudero,Hyundai,Santa Fe,2023,2,0
+STD-3423,5216743467595,Martina Agustí Bayo,Mazda,CX-5,2007,5,2
+STL-1976,4473894922060,Herminia Abril Falcó,Toyota,RAV4,2004,4,1
+SVN-7096,4466608552445,Pastora de Teruel,Hyundai,Elantra,2011,0,1
+SWJ-2104,1286557762620,Gloria Barrio,Kia,Sorento,2021,4,2
+SXG-9293,3234337859734,Fulgencio Pombo Aparicio,Honda,Fit,1997,4,0
+SXO-1575,3379500750105,Silvio Cabañas Ibarra,Kia,Sorento,2019,5,0
+SYO-9628,6607720573123,Eric Damián Barco Palau,Kia,Picanto,2007,4,3
+SYP-1690,8807443777498,Ester Collado Gelabert,Honda,Accord,2022,1,2
+SZQ-8328,4439361276818,Anita de Alvarez,Hyundai,Elantra,2008,0,2
+SZX-9624,7886479083967,Estefanía Fajardo Álamo,Honda,Fit,2001,2,0
+TAQ-0239,8519688386080,Victor Manuel Cánovas Rodriguez,Mazda,3,1998,3,1
+TAX-4995,2287549237335,Pedro Coronado Catalán,Toyota,Hilux,1996,3,3
+TAZ-8322,4658534397870,Brígida Ripoll Gil,Honda,Accord,2022,4,0
+TCB-0131,6228211476647,Leonel Carnero Poza,Hyundai,Elantra,2004,4,2
+TCL-1985,1310128349664,Herminia Lucena Moreno,Hyundai,Accent,2020,5,2
+TCV-4214,8594835300539,Delia del Ramírez,Kia,Picanto,2022,4,1
+TCX-1066,9682043189588,Jorge Jordán Laguna,Toyota,RAV4,2003,1,2
+TCY-7049,4938165589736,Gema Tere Oliveras Zurita,Hyundai,Elantra,2004,5,1
+TDH-8062,4990455598951,Lino de Naranjo,Toyota,Corolla,2018,5,3
+TEB-9818,7295099945348,Perlita Tomás Amigó,Toyota,Yaris,2011,3,2
+TER-7819,1583252473478,Ricarda Bartolomé-Adadia,Honda,Accord,2005,5,2
+TFF-7682,7885470689544,Nicodemo Tello Goñi,Honda,Fit,1999,2,2
+TGC-1857,8460742526116,Marc del Atienza,Mazda,3,2021,0,1
+TGV-2954,2705937847780,Nieves Antúnez,Honda,Fit,2016,2,2
+THC-4567,9791712807627,Feliciana del Galán,Toyota,RAV4,2021,5,2
+THQ-9687,8099870272240,Melisa Amor Palomares Villalobos,Kia,Sorento,2012,5,0
+THU-2651,6104267253443,Arsenio del Diego,Toyota,Corolla,2014,3,2
+TJE-6030,6449449579903,Virginia Gilabert Mora,Mazda,BT-50,2007,3,2
+TKI-7716,6891983711488,Rita Ródenas Juárez,Mazda,CX-5,2017,4,1
+TKR-4799,6639484760981,Celso del Girón,Toyota,RAV4,2005,2,2
+TKS-5343,4553727687614,Loida Armida Vera Burgos,Mazda,3,2018,3,2
+TKV-7434,3572139000613,Luís Monreal-Arroyo,Kia,Sportage,2019,5,0
+TLR-9870,2162966915979,Carmen Guardia-Gaya,Toyota,Corolla,2022,0,0
+TMA-7970,1576480956139,Joel Feijoo Avilés,Toyota,Yaris,2015,1,3
+TMC-7237,7786532557375,Teófilo Calderón,Mazda,3,2008,1,0
+TMM-3040,7237458845277,Albano Arana Coll,Hyundai,Accent,2022,5,2
+TOM-7602,7761838929110,Olivia Terrón Catalán,Honda,CR-V,2024,5,0
+TOV-7772,9848421410639,Ignacio Bermudez Yáñez,Toyota,RAV4,2023,4,3
+TOX-5841,7371126819735,Feliciana Sanmartín-Torrens,Toyota,Corolla,2022,0,2
+TPY-3040,8090975902627,Octavio Fuertes Arana,Hyundai,Accent,2013,5,3
+TQF-2223,3149284942983,Salud Barroso Vallés,Toyota,Corolla,2003,2,3
+TQL-9655,7741082353113,Edelmira Peral Moya,Kia,Picanto,1995,0,1
+TQP-6917,8800272309023,Beatriz María Cristina Sans Sosa,Hyundai,Elantra,2016,1,3
+TRA-3591,9744344861119,Iker Salvà Galan,Kia,Sportage,2022,4,1
+TRM-8433,6823788457490,Emiliana Catalá Jerez,Mazda,3,2000,3,1
+TRO-4764,5935487771712,Nélida Haro Serra,Hyundai,Tucson,2005,2,1
+TRS-1535,6807713202124,Toni Casanova Cañizares,Toyota,Yaris,2005,5,3
+TTA-5323,2799195247196,Flavio Urrutia Contreras,Kia,Picanto,2008,1,1
+TUP-6461,6088834454052,Florentino Ferrández Moles,Toyota,Corolla,1995,3,2
+TVE-5771,7714050279291,Angelina Luna Casanovas,Honda,Fit,2015,4,3
+TVL-1779,8183911266781,Adelaida Pinilla Elías,Mazda,3,2018,5,1
+TVL-7593,6833281733008,Alfredo Roldan Castañeda,Hyundai,Accent,2009,0,2
+TVP-7584,6552034597390,Ambrosio Giménez Roman,Mazda,6,2011,1,3
+TWG-0184,5422772600108,Priscila Barrera Sancho,Hyundai,Santa Fe,2023,0,0
+TXB-3142,2815863629924,Isidro Tolosa Prada,Kia,Rio,2021,5,2
+TXL-9983,7999043905541,Hernán Gil Bernad,Honda,Fit,2023,3,0
+TXU-5170,3564922580530,Godofredo Menendez Sánchez,Honda,CR-V,2016,3,3
+TYJ-7276,7238991039149,Marcio Ripoll Martin,Toyota,Corolla,2013,0,3
+TYU-3395,4124665536341,Marisa Esteve Canales,Mazda,CX-5,2002,3,3
+UBE-6980,6042994924746,Tristán Coca Aguiló,Mazda,CX-5,2003,2,1
+UBX-4827,8153018970306,Fabián Tamayo Almagro,Honda,CR-V,2017,4,0
+UBZ-8744,1298006812479,Cipriano Carvajal Linares,Kia,Sorento,1997,5,0
+UCH-5175,7162454163442,Andrés Felipe Vigil,Kia,Sorento,2020,0,2
+UCO-7984,8091036593173,Sebastián de Pedrero,Honda,Civic,2004,2,3
+UCP-7515,6687729022464,Abigaíl Expósito Domingo,Toyota,Corolla,1996,4,3
+UCZ-8239,1586786929677,Clímaco López Blanch,Hyundai,Tucson,2023,4,0
+UDC-6565,2967759722446,Apolonia Quesada Vicente,Toyota,Yaris,2004,5,3
+UDK-3495,7149661595037,Teodosio Milla-Ariza,Kia,Sportage,1997,0,3
+UFC-1153,3905282237221,Nadia Corbacho Soria,Mazda,CX-5,2020,1,2
+UFQ-4670,7969422815087,Clara Báez,Hyundai,Santa Fe,2019,5,2
+UGO-6889,8981056001970,Telmo del Elías,Toyota,RAV4,2000,3,0
+UGU-1075,5653335085999,Pío Prats Prada,Hyundai,Tucson,2008,2,0
+UHA-5580,1488720685126,Yésica Benavides,Kia,Rio,1999,2,2
+UHL-1204,2616812898046,Heraclio Torrent Suárez,Toyota,Yaris,2016,0,1
+UIA-6416,9849858015154,Candela Varela Arco,Mazda,3,1995,0,0
+UIF-5398,6365115033109,Flora del Varela,Kia,Rio,2018,1,2
+UJG-1286,5805294533641,Serafina Navarro Gallart,Honda,CR-V,2012,5,3
+UJG-9380,5700579477969,Antonia Serra Vega,Hyundai,Elantra,2006,5,3
+UJN-8513,4656610302451,Agustina Castilla Ferrando,Mazda,3,1998,3,2
+UJP-9190,8631877620355,Víctor Bernal Catalá,Hyundai,Santa Fe,2007,0,3
+UJX-0898,5025487169550,Héctor Carbonell Martín,Honda,Fit,2020,0,1
+UKQ-3555,8682672589107,Fausto Benítez Ariño,Hyundai,Santa Fe,1995,4,0
+UMM-6875,3744871048049,Evita Vall Gámez,Toyota,Hilux,2010,0,3
+UOK-8430,3557673369733,Jose Báez Salom,Kia,Sorento,2009,4,3
+UOQ-4536,8924435529428,Hipólito Gonzalo Zamora,Mazda,BT-50,2016,1,1
+UOR-1575,6558183096710,Ruperta Zabala,Mazda,3,2005,4,0
+UQI-5276,9755571727105,Anacleto Teobaldo Soto Corbacho,Mazda,3,2010,4,1
+URW-3034,7818954214767,Ricarda Gracia Reina Mur,Mazda,CX-5,1997,5,1
+URY-5318,9129654623517,Eloísa Nevado González,Kia,Sorento,2005,3,1
+USS-0969,8371186888014,Santiago Hervia,Kia,Sorento,2016,4,1
+UVQ-1116,5299315357408,Rafaela Garcés,Honda,Accord,2020,4,3
+UWQ-8057,1667116835472,Itziar Morell Manso,Mazda,3,2021,1,2
+UWS-8891,6485876636999,Amada Ferrándiz,Kia,Rio,2005,4,0
+UXM-9522,8939091295418,Manu Artigas Gómez,Hyundai,Tucson,2015,0,1
+UYU-4075,4443849115231,Dimas Guitart Álamo,Honda,Civic,2024,1,2
+UZK-7773,4384786806423,María Pilar Estévez Rosado,Kia,Rio,1999,4,2
+VCD-4357,2299802437072,Lucas Alegria-Belda,Hyundai,Santa Fe,2021,5,1
+VCK-2779,3266467092482,Cintia Benavente Gomila,Toyota,Yaris,2006,0,1
+VCT-2018,4665710866399,Rosa María Salas,Hyundai,Santa Fe,2005,2,1
+VDH-2658,7852934961247,Trini Maricela Pi Cabezas,Mazda,BT-50,1996,4,3
+VDN-4475,7976589249159,Reyes Gonzalo,Hyundai,Santa Fe,2011,3,0
+VFZ-3321,2841175060289,Fidela Úrsula Conde Arévalo,Honda,Fit,2010,1,0
+VGL-2619,1078815315609,Lorenzo Tello-Escrivá,Toyota,Yaris,2023,5,1
+VGO-3415,6085026896831,Sabas Estévez Manrique,Honda,CR-V,2014,0,2
+VGQ-0122,7737274477690,Victorino Ibáñez Carballo,Hyundai,Santa Fe,2012,3,0
+VIW-9144,7849400977884,Javi Jurado Rivero,Honda,Accord,2007,0,1
+VIY-7854,5149576747457,Nerea de Fortuny,Kia,Sorento,2022,5,3
+VJF-9733,6681194507929,Abraham Andreu Fonseca,Toyota,RAV4,1995,4,0
+VLC-4889,3332273434073,Maura Garriga,Toyota,RAV4,2016,3,1
+VMH-1598,9506756943714,Marianela María Cristina Canet Vila,Mazda,BT-50,2001,3,1
+VOB-3838,5729370458184,Abraham Ovidio Mateu Baró,Hyundai,Santa Fe,2009,4,3
+VOG-0892,7567079372646,Dani Vendrell Menéndez,Honda,CR-V,2008,4,2
+VPE-4089,5841652659554,Vinicio Mate Salcedo,Toyota,Hilux,2021,0,1
+VQU-7437,5958717250032,Gaspar Pascual Mesa Morales,Toyota,RAV4,2021,5,2
+VRT-3557,2468783152465,Sosimo Varela Martín,Toyota,RAV4,2013,1,0
+VSD-8830,8986759450933,Gema Flor Sarabia,Hyundai,Accent,2017,0,3
+VSH-5440,3043709432333,Encarnacion Molina,Kia,Picanto,2015,0,0
+VTI-4144,9601310330394,Sandra Angulo Duque,Toyota,Yaris,2019,3,3
+VTQ-4103,5838301373316,Paz Palomar,Kia,Picanto,2017,4,0
+VUI-7827,3833774881694,Jose Manuel Ibañez Porcel,Kia,Rio,2008,4,1
+VUW-1722,1675415499043,Modesto Baquero-Asenjo,Kia,Sorento,2001,4,2
+VVE-7898,8040343376045,Mariano Pagès Castrillo,Toyota,Corolla,2004,5,1
+VVP-2203,6707995830887,Matías Maximino Cervantes Ferrando,Hyundai,Santa Fe,1998,4,0
+VWB-5764,2712330167997,Celestina Fuente,Honda,CR-V,2020,3,3
+VXY-1444,9947684416684,Pili Berenguer-Roldan,Kia,Sorento,2019,4,1
+VYC-4534,1170855207249,Ramiro Rincón Guillen,Mazda,3,1999,3,1
+VZK-5890,6569428738424,Natalio Carretero Lastra,Hyundai,Elantra,2021,0,1
+WAQ-8516,9594508323491,Benigno Aragón Company,Hyundai,Santa Fe,2002,5,1
+WAW-8610,3230689822680,Rafa de Barberá,Honda,Fit,2006,3,3
+WCA-8017,4272967364236,Jessica Montenegro Morell,Kia,Sportage,2011,1,2
+WCJ-5468,7802164881981,Agustín Segarra,Honda,Civic,2011,4,2
+WCY-8976,1546555816729,Ana Belén Bayo-Barbero,Toyota,RAV4,2001,0,2
+WDA-8331,7687256823046,Enrique Salamanca Casanovas,Honda,Accord,2014,0,2
+WDU-6352,1217348136985,Javier Casanova Barbero,Hyundai,Elantra,2023,3,3
+WEJ-6061,5421071428240,Marino Arroyo,Toyota,Corolla,2005,5,2
+WEW-5156,1084271622869,Santos Lucas,Kia,Picanto,1995,5,3
+WFN-1148,4325816727933,Margarita Bellido Murcia,Kia,Rio,2019,1,0
+WGM-1537,5607844732858,Nuria Heredia Vicente,Toyota,RAV4,1997,5,0
+WGW-8047,3568298797907,Jose Carlos Azorin Zapata,Honda,Civic,2003,0,2
+WHB-8858,3445886196378,Carolina Mur Benavides,Mazda,BT-50,1996,4,1
+WHP-3736,9970991669550,Rosario Araujo Casanovas,Toyota,Hilux,2002,2,2
+WHV-1989,1093751789924,María Jesús Mateu Fernandez,Mazda,CX-5,2021,5,0
+WHY-1060,7442423470665,Leyre Marqués Muñoz,Honda,Civic,2013,3,2
+WJX-7481,6379138477328,Natalio de Parra,Mazda,6,2012,3,0
+WJY-6543,8916232709761,Celestina Moreno Valentín,Hyundai,Accent,2016,3,0
+WKN-4782,9926157358216,Abigaíl del Franch,Hyundai,Elantra,2019,5,0
+WLP-6674,8341094119168,Ainoa Carvajal Jimenez,Mazda,CX-5,2015,0,0
+WND-9722,3195215303278,Miguel Alcalde Adadia,Hyundai,Tucson,1997,0,0
+WNX-7811,2092304258880,Belén Aguado,Hyundai,Accent,2003,1,2
+WPR-5679,5025852888896,Elodia Busquets Catalá,Mazda,CX-5,2018,1,0
+WQH-1605,3980134029820,Samuel Oller,Hyundai,Tucson,2009,3,1
+WQR-1505,4819886993242,Salvador Camps-Sedano,Mazda,BT-50,2006,4,0
+WQR-3397,4663821854666,José Mari del Grau,Hyundai,Santa Fe,1997,0,0
+WRQ-8924,3471070773341,Valentina Lucas Ribas,Kia,Rio,2001,4,0
+WRU-8409,1514618354988,Dominga Cuenca Velázquez,Kia,Picanto,2024,2,0
+WRX-8268,8701439105608,Amalia de Almeida,Hyundai,Elantra,2009,3,1
+WSA-6231,4001821319020,Rufina Sáenz Gómez,Honda,CR-V,2010,4,0
+WSN-2351,9196906688966,Obdulia Palomar Soriano,Toyota,Hilux,2020,3,3
+WSN-8132,9194531858079,Encarnita del Valverde,Mazda,3,2017,2,2
+WSO-5545,3546168120695,Francisco Javier Gutiérrez Villanueva,Kia,Rio,2022,4,0
+WTI-0424,9673217881904,Noelia Castrillo Bolaños,Toyota,RAV4,2004,0,3
+WWE-6978,9330834974838,Jovita de Fuster,Kia,Rio,2008,2,3
+WWK-2492,2450589095511,Violeta Vendrell,Honda,CR-V,2004,3,2
+WXL-4442,7929227704576,Flor Cerdá,Kia,Sorento,2002,2,3
+WYV-0267,3855241801920,Amor Fabra Piña,Toyota,Corolla,2024,5,3
+WZC-1080,6016489373181,Nico Garmendia Fuente,Mazda,3,2021,3,1
+XAJ-1814,4913689460342,Azeneth del Durán,Kia,Sorento,1995,4,2
+XAV-7299,9577809634418,Mariano Solana Quevedo,Mazda,BT-50,2015,5,2
+XBE-4165,5149787521223,Chita Bibiana Arnal Lloret,Honda,Civic,2022,5,1
+XBL-7619,4495963218376,Rolando Garmendia Fuentes,Mazda,BT-50,2005,2,3
+XBN-9979,8471662952266,Aureliano Saez Sala,Toyota,Yaris,1999,3,2
+XBR-0409,5100039331052,Reina Pons Garzón,Mazda,3,2013,2,0
+XCC-0525,5748691131988,Jovita Estévez Echeverría,Kia,Rio,2010,5,0
+XCO-7937,7988114277941,Jose Antonio Rivero-Hoz,Hyundai,Santa Fe,2011,5,0
+XCZ-9813,8616863333534,Melchor Salcedo Cuéllar,Hyundai,Santa Fe,2000,3,0
+XEL-3068,8457501829250,Loreto Portillo Alcalde,Kia,Picanto,2023,3,3
+XEQ-4063,7872823834751,Ale Río Robledo,Mazda,6,2006,0,1
+XGM-6224,6398128857219,Florina Portillo Mulet,Hyundai,Elantra,2008,4,1
+XGT-6754,6406173575094,África Larrañaga Morante,Honda,CR-V,1997,4,1
+XHE-6569,5991813252788,Félix Cal,Hyundai,Accent,2022,4,1
+XHI-9510,3911739065944,Adelina Coca-Garmendia,Mazda,BT-50,2005,5,2
+XIA-2950,4089479802642,Guillermo Almansa Cordero,Kia,Picanto,1996,2,1
+XIU-2533,5106221559544,Ulises de Barrena,Honda,CR-V,2007,5,3
+XKF-4339,4282036903697,Florencio Jorge Asensio Padilla,Mazda,3,1997,1,1
+XMQ-2617,3278417849816,Rita Camps,Toyota,Corolla,2020,4,0
+XNV-2273,3905928343556,Águeda Montaña,Toyota,Yaris,2019,5,3
+XOL-3952,3441567782792,Esther Gallardo-Verdugo,Honda,Accord,2017,4,3
+XPV-4924,9938700885981,Edelmira Castellanos,Mazda,BT-50,2006,2,1
+XPZ-9010,8938090272862,Eloísa Lillo Francisco,Mazda,6,2016,3,2
+XRK-4630,7576849632640,Eric Vilar Benet,Mazda,6,2019,2,0
+XRQ-5652,5173321012417,Emigdio Pazos Enríquez,Mazda,3,2004,4,3
+XRX-7519,7050793100166,Laura Manrique Beltrán,Mazda,BT-50,2019,1,1
+XSX-3308,8897548340923,Pepe Guadalupe Vendrell Villaverde,Honda,CR-V,1999,4,1
+XTR-4947,2042885422639,Calixta Mesa Llorente,Toyota,Hilux,2015,2,2
+XTS-6639,2254950673927,María Losada Pinto,Kia,Sportage,2004,2,3
+XTV-4058,4196820423460,René Escamilla Bárcena,Honda,Civic,1999,0,3
+XVD-2265,6950319268884,Vinicio Dueñas,Kia,Sportage,2009,3,3
+XVL-7126,9638330897492,Pánfilo Palma Ramírez,Honda,Accord,1996,1,3
+XWC-2310,2307337073994,Nélida Tapia Gutiérrez,Honda,CR-V,2016,3,1
+XXO-1236,3765112133471,Isidora Inmaculada Corbacho Chico,Toyota,Yaris,1995,5,1
+XXO-9000,6830741651293,León Sebastián Calderón,Mazda,CX-5,2004,2,2
+XYG-3449,4700554657496,Verónica Iñiguez Rosell,Toyota,RAV4,2014,1,1
+XYS-0800,7041326647948,Nico Plaza Nuñez,Toyota,Corolla,1997,5,2
+XZH-1788,3293929721079,Corona Chaparro,Honda,CR-V,2016,4,1
+XZT-6371,2532744355090,Ruben Isaac Tovar Nogués,Mazda,3,2001,3,1
+YBB-9977,9130744647656,Vilma Sanjuan,Hyundai,Santa Fe,2009,2,2
+YBU-0436,8867152926152,Patricia Campos Barrera,Mazda,BT-50,2021,3,3
+YCB-4946,6416568745969,Tito Beltrán Colomer,Toyota,Hilux,2017,4,1
+YDA-3691,8433690414255,Nazaret Chacón-Aguilar,Mazda,6,2000,3,2
+YDP-0697,2784119943509,Valentina Adadia Ribera,Toyota,Hilux,2016,3,0
+YDX-3212,5519068124743,Segismundo Arcos Tejedor,Hyundai,Elantra,2011,1,1
+YGG-8185,6581582374533,Ismael Tejero Vall,Honda,Accord,2022,1,3
+YGJ-5781,1477584227589,Lara Lorenzo Lago,Hyundai,Tucson,2014,4,3
+YGP-9776,8332961826985,Maximiano Valbuena Prats,Mazda,6,2010,0,1
+YHI-8993,8328139983837,Severiano Calderon Manso,Toyota,Hilux,1995,0,1
+YHS-0630,4735754227467,Sergio Salamanca Badía,Hyundai,Tucson,2012,0,3
+YIJ-5207,2487845850223,Josefa Hernandez Berenguer,Honda,Fit,2018,1,1
+YJO-4789,1486775838378,Vidal Berto Cid Espejo,Toyota,RAV4,2020,4,2
+YLI-7102,2999778952571,Rosalva Benavides Andrade,Kia,Sorento,1998,3,0
+YLL-7417,3646915368523,Constanza Pedro Chaparro,Toyota,RAV4,1997,1,2
+YLM-4271,7779743059818,Manuela Ainoa Ávila Solís,Toyota,Hilux,2010,5,2
+YMK-6367,9392862982737,Martín Cabeza Amores,Toyota,RAV4,1999,1,3
+YOS-0786,4165502073401,Juan Bautista Diaz Lloret,Hyundai,Santa Fe,2011,4,0
+YOZ-6154,9144337924216,Sigfrido García Nicolau,Hyundai,Accent,1996,2,3
+YPP-1481,3838130270722,Aníbal Manjón-Jordán,Hyundai,Elantra,1997,3,1
+YPS-7398,4649334569172,Alcides Vázquez Montaña,Toyota,Yaris,2009,0,3
+YQD-7589,9286601574045,Chita Arroyo Luna,Toyota,Yaris,2010,1,2
+YRW-2169,1210273445543,Maribel Calvo-Gallardo,Toyota,Hilux,2018,3,3
+YSI-3799,3711682000451,Damián Ordóñez Redondo,Mazda,BT-50,2011,3,1
+YSW-0570,3785145289775,Florentina Cabrero,Honda,Civic,2012,2,0
+YTO-7684,9408123790164,Iván del Casals,Honda,Accord,1999,3,0
+YUH-9079,5843781995163,Victor Álvarez Zaragoza,Kia,Rio,2014,4,1
+YWS-4707,6081813281566,Eli Giner Manjón,Toyota,Hilux,1995,2,2
+YWU-6349,2429686861843,Tomasa de Anglada,Honda,Fit,2003,2,3
+YXW-9738,3428701105939,Eliseo del Palomares,Kia,Rio,2018,3,3
+YYB-6639,6951280108244,Jimena Izaguirre Atienza,Honda,Civic,1999,4,1
+YYK-1672,1763645081796,Inés Hidalgo Pulido,Honda,Accord,2017,1,2
+YZO-0685,3155149471557,Íñigo del Quiroga,Hyundai,Elantra,2007,4,1
+ZAC-9460,5715435870716,Ovidio Zamora Salvà,Honda,Accord,2018,2,0
+ZAU-5351,4152398937147,Remigio Falcó Cardona,Hyundai,Tucson,2024,5,3
+ZBZ-6862,6892652305322,Nacho Hurtado-Narváez,Mazda,6,2000,1,0
+ZCJ-6834,9729802838032,Javi Urrutia Solé,Hyundai,Accent,2010,3,1
+ZDG-3110,9772333719694,Ester Aránzazu Castell Tamayo,Hyundai,Tucson,1996,2,1
+ZDN-6328,8449872821693,Jacobo Arteaga,Mazda,3,1995,3,1
+ZDS-7523,5547949278244,Fernanda Jover Bermudez,Hyundai,Tucson,2018,2,1
+ZDV-9782,9961384247801,Marisela Carvajal Alegria,Kia,Rio,2012,0,2
+ZEL-2285,7914251276490,Anastasia Barrera Solano,Toyota,Yaris,1999,3,2
+ZFD-1850,3400519142251,Miguel del Lorenzo,Mazda,3,2013,0,0
+ZFZ-8233,7661644033547,Emilio Campillo Soler,Kia,Sorento,1997,4,1
+ZGC-6102,5462770336121,Marcial Villanueva Cabanillas,Honda,Civic,2006,3,3
+ZGK-8666,9984558413787,Teobaldo del Portero,Honda,Accord,2017,0,2
+ZHI-0464,1114208790513,Heriberto de Roldan,Mazda,3,1997,4,2
+ZHX-9872,9013693840380,Iván López Grau,Mazda,BT-50,1999,0,2
+ZIE-8610,1653510373326,Alondra Solís Mateu,Mazda,6,2013,1,2
+ZIO-2248,7747623316053,Juan Manuel Sevillano Mur,Honda,Civic,2007,1,3
+ZIW-1786,8024463845405,Paula Ariel Esteve Camps,Kia,Picanto,2022,1,3
+ZLD-8133,4112752895020,Carlos Régulo Cerro Vergara,Hyundai,Tucson,2001,2,2
+ZLN-8438,9709209372757,Julia Sánchez Benet,Kia,Sportage,2009,2,2
+ZLQ-5309,5214425651323,Jose Angel Cantero-Milla,Mazda,CX-5,2019,1,3
+ZLT-0601,9254878757419,Alfonso Camacho-Daza,Kia,Picanto,2004,5,0
+ZMC-9194,1107383890695,Julie Camino Alcántara,Mazda,BT-50,2020,2,1
+ZNA-5266,8499091662944,David del Blasco,Honda,Accord,2007,1,2
+ZOD-5155,4805212814346,Rodolfo Cerro Badía,Hyundai,Santa Fe,2014,5,3
+ZOM-0552,9885658915116,Custodio Velasco Milla,Mazda,6,2016,0,1
+ZON-6104,8637277311951,Emma Amaya Conesa,Mazda,6,2024,1,1
+ZPS-8112,2218491722719,Ruben Gracia,Honda,Civic,2016,5,3
+ZQM-6296,9254496154600,Marta Balaguer Marti,Toyota,RAV4,2020,0,1
+ZQU-3588,7928306703971,Ámbar Lucas Ripoll,Toyota,RAV4,2012,1,3
+ZRQ-0026,4336451917498,Esteban Royo Jove,Mazda,BT-50,2006,1,1
+ZRW-9301,1171752873740,Josep Buendía Martinez,Toyota,RAV4,2023,3,2
+ZSG-9799,6549054386855,Candelas Montesinos Mancebo,Honda,Fit,2019,5,3
+ZSW-4726,9412158044169,Nereida Herranz Gutierrez,Mazda,3,1998,5,2
+ZSX-9065,5990688475138,María Manuela Prado-Aroca,Toyota,Hilux,2000,3,1
+ZSY-3030,4055316844578,Juanito Roman-Larrea,Mazda,CX-5,1996,1,0
+ZTH-6743,9873986763998,Haroldo Tomé Montero,Mazda,CX-5,2020,1,2
+ZTI-1166,5570758578066,Maricela Noguera-Quero,Honda,Civic,2011,2,2
+ZUF-1751,6264524768857,José Antonio Moles-Cano,Toyota,Hilux,2013,1,3
+ZUJ-6897,2287290799656,Clotilde Angulo Marí,Mazda,BT-50,1997,5,2
+ZVB-9520,1822403719326,Marciano Manzanares Santamaría,Honda,Fit,1999,3,0
+ZWE-0326,6010000191127,Prudencia Tomé-Amaya,Hyundai,Santa Fe,2002,0,3
+ZWO-2312,3677294798290,Ligia Maricruz Puig Ayala,Toyota,RAV4,1998,2,1
+ZWQ-2691,6082016633795,Ibán Mármol Torrent,Hyundai,Tucson,2003,4,0
+ZWU-2409,7476937100593,Dafne Suarez Gibert,Honda,Fit,2020,2,1
+ZWX-2943,2329215888633,Vera Iriarte Bas,Hyundai,Elantra,2004,3,0
+ZWX-8008,4513676936945,Obdulia Andrés Goñi,Toyota,RAV4,2004,1,2
+ZYM-9392,1245524680443,Jaime Rodriguez Orozco,Toyota,Corolla,2017,4,3
+ZYV-4969,1193974887255,Liliana Pons-Fernandez,Honda,CR-V,2005,3,1
+ZZZ-1007,9939414013763,Adalberto Díez,Honda,CR-V,2013,1,1

@@ -23,4 +23,16 @@ public class NodoABB {
         this.izquierda = null;
         this.derecha = null;
     }
+
+    public Vehiculo getVehiculo() {
+        return vehiculo;
+    }
+
+    public NodoABB getIzquierda() {
+        return izquierda;
+    }
+
+    public NodoABB getDerecha() {
+        return derecha;
+    }
 }

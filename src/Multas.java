@@ -1,24 +1,112 @@
 
+import javax.swing.*;
+import javax.swing.filechooser.FileSystemView;
+import javax.swing.table.DefaultTableModel;
+import java.awt.*;
+import java.io.BufferedReader;
 import java.io.File;
-import javax.swing.JOptionPane;
+import java.io.FileReader;
+import java.io.IOException;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+public class Multas extends javax.swing.JFrame{
 
-/**
- *
- * @author User
- */
-public class Multas extends javax.swing.JFrame {
-
-    /**
-     * Creates new form Multas
-     */
+ // Cambié el nombre a jTable2 para que coincida con el inicializado en initComponents
+    private DefaultTableModel tableModel;
+    public ListaDoblementeEnlazadaMultas listaMultas;
+   public JTextArea getTextM() {
+       return TextM;
+   }
+   
     public Multas() {
-        initComponents();
+        initComponents(); // Inicializa los componentes primero
+        String[] columnNames = {"ID", "Placa", "Fecha", "Descripción", "Monto", "Departamento"};
+        tableModel = new DefaultTableModel(columnNames, 0) {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false; // Las celdas no son editables
+            }
+        };
+        jTable2.setModel(tableModel); // Establece el modelo de la tabla
+        listaMultas = new ListaDoblementeEnlazadaMultas();
     }
+private void cargarMultasDesdeCarpeta() {
+    JFileChooser fileChooser = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
+    fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+    fileChooser.setDialogTitle("Seleccione la carpeta general de departamentos");
+    int userSelection = fileChooser.showOpenDialog(this);
+    if (userSelection == JFileChooser.APPROVE_OPTION) {
+        File selectedDirectory = fileChooser.getSelectedFile();
+        listaMultas.limpiar();
+        tableModel.setRowCount(0); 
+        File[] departmentFolders = selectedDirectory.listFiles(File::isDirectory);
+        if (departmentFolders != null) {
+            for (File folder : departmentFolders) {
+                String departmentName = folder.getName();
+                File multasFile = new File(folder, departmentName + "_multas.txt");
+                if (multasFile.exists() && multasFile.isFile()) {
+                    System.out.println("Cargando multas de: " + multasFile.getAbsolutePath());
+                    // Asegúrate de pasar el JTextArea al método cargarMultasDesdeArchivo
+                    cargarMultasDesdeArchivo(multasFile, departmentName, TextM); // Pasar el JTextArea
+                } else {
+                    System.out.println("Archivo de multas no encontrado en: " + folder.getAbsolutePath());
+                }
+            }
+            actualizarTabla();
+            if (listaMultas.obtenerDatosParaTabla().length > 0) {
+                JOptionPane.showMessageDialog(this, "Multas cargadas exitosamente.", "Carga Completa", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(this, "No se encontraron archivos de multas válidos.", "Carga Fallida", JOptionPane.WARNING_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "No se encontraron subcarpetas de departamentos en el directorio seleccionado.", "Advertencia", JOptionPane.WARNING_MESSAGE);
+        }
+    }
+}
+private void cargarMultasDesdeArchivo(File archivo, String departamento, JTextArea textM) {
+    try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
+        String line;
+        br.readLine(); // Saltar la primera línea (encabezados)
+        while ((line = br.readLine()) != null) {
+            String[] parts = line.split(",");
+            if (parts.length == 4) {
+                String placa = parts[0].trim();
+                String fecha = parts[1].trim();
+                String descripcion = parts[2].trim();
+                double monto = Double.parseDouble(parts[3].trim());
+                Multa multa = new Multa(placa, fecha, descripcion, monto, departamento);
+                
+                // Pasar el JTextArea al método agregarMulta
+                listaMultas.agregarMulta(multa, textM);
+            } else {
+                System.err.println("Línea mal formateada en " + archivo.getName() + ": " + line);
+            }
+        }
+    } catch (IOException | NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Error al leer el archivo " + archivo.getName() + ": " + e.getMessage(), "Error de Lectura", JOptionPane.ERROR_MESSAGE);
+        e.printStackTrace();
+    }
+}
+
+         public void actualizarTabla() {
+        tableModel.setRowCount(0);
+        Object[][] datos = listaMultas.obtenerDatosParaTabla();
+        for (Object[] row : datos) {
+            tableModel.addRow(row);
+        }
+    }
+public void actualizarTabla(Object[][] datos) {
+    tableModel.setRowCount(0); // Limpia la tabla
+    for (Object[] fila : datos) {
+        tableModel.addRow(fila);
+    }
+}
+public Multa buscarMultaPorId(int id) {
+return listaMultas.buscarMultaPorId(id);
+}
+
+
+
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -33,16 +121,17 @@ public class Multas extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        Buscar = new javax.swing.JTextField();
+        Buscador = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jTextField2 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jTextField3 = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        TextM = new javax.swing.JTextArea();
+        Eliminar = new javax.swing.JTextField();
+        Eliminador = new javax.swing.JButton();
+        Crear = new javax.swing.JButton();
+        Modificar = new javax.swing.JTextField();
+        btnModificar = new javax.swing.JButton();
+        CargaM = new javax.swing.JButton();
+        Salir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -63,22 +152,49 @@ public class Multas extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/check.png"))); // NOI18N
         jLabel1.setText("Gestor de Multas SIRVE");
 
-        jButton1.setText("Busacar");
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane2.setViewportView(jTextArea1);
-
-        jButton2.setText("Elimiar");
-
-        jButton3.setText("Ingresar");
-
-        jButton4.setText("Modificar");
-
-        jButton5.setText("Carga");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        Buscador.setText("Buscar");
+        Buscador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                BuscadorActionPerformed(evt);
+            }
+        });
+
+        TextM.setColumns(20);
+        TextM.setRows(5);
+        jScrollPane2.setViewportView(TextM);
+
+        Eliminador.setText("Elimiar");
+        Eliminador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminadorActionPerformed(evt);
+            }
+        });
+
+        Crear.setText("Ingresar");
+        Crear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CrearActionPerformed(evt);
+            }
+        });
+
+        btnModificar.setText("Modificar");
+        btnModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarActionPerformed(evt);
+            }
+        });
+
+        CargaM.setText("Carga");
+        CargaM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CargaMActionPerformed(evt);
+            }
+        });
+
+        Salir.setText("Salir");
+        Salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalirActionPerformed(evt);
             }
         });
 
@@ -88,7 +204,7 @@ public class Multas extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(jButton5)
+                .addComponent(CargaM)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -99,31 +215,35 @@ public class Multas extends javax.swing.JFrame {
                                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(6, 6, 6)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton1)
+                                .addComponent(Buscador)
                                 .addGap(29, 29, 29)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton2)
+                                .addComponent(Eliminador)
                                 .addGap(34, 34, 34)
-                                .addComponent(jButton3)
+                                .addComponent(Crear)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(Modificar, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton4)
+                                .addComponent(btnModificar)
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(129, 129, 129)
                         .addComponent(jLabel1)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Salir)
+                        .addGap(16, 16, 16))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addComponent(jLabel1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(Salir))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(32, 32, 32)
@@ -133,17 +253,17 @@ public class Multas extends javax.swing.JFrame {
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(15, 15, 15)
-                        .addComponent(jButton5)))
+                        .addComponent(CargaM)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton2)
-                        .addComponent(jButton3)
-                        .addComponent(jButton1)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton4)))
+                        .addComponent(Eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Eliminador)
+                        .addComponent(Crear)
+                        .addComponent(Buscador)
+                        .addComponent(Modificar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnModificar)))
                 .addContainerGap(153, Short.MAX_VALUE))
         );
 
@@ -161,81 +281,102 @@ public class Multas extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-    JFileChooser fileChooser = new JFileChooser();
-    fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-    fileChooser.setDialogTitle("Selecciona la carpeta SIRVE_Datos_Vehiculos_DataSet");
+    private void CargaMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CargaMActionPerformed
+cargarMultasDesdeCarpeta();
+    }//GEN-LAST:event_CargaMActionPerformed
 
-    int userSelection = fileChooser.showOpenDialog(this);
-
-    if (userSelection == JFileChooser.APPROVE_OPTION) {
-        File selectedFolder = fileChooser.getSelectedFile();
-        if (selectedFolder.isDirectory()) {
-            // Limpiar datos anteriores
-            listaVehiculosCargados = new ListaDoblementeEnlazada<>();
-            vehiculosMap = new HashMap<>();
-            multasTemporales = new ArrayList<>();
-            traspasosTemporales = new ArrayList<>();
-            nextVehiculoId = 1; // Reiniciar el ID al cargar nuevos datos
-
-            cargarDatosDesdeCarpeta(selectedFolder);
-            actualizarTablaVehiculos(); // Mostrar los datos cargados en la JTable
-            JOptionPane.showMessageDialog(this, "Datos cargados exitosamente.");
-        } else {
-            JOptionPane.showMessageDialog(this, "Por favor, selecciona una carpeta válida.", "Error de selección", JOptionPane.ERROR_MESSAGE);
-        }
+    private void BuscadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscadorActionPerformed
+    String placaBuscada = Buscar.getText().trim();
+    if (placaBuscada.isEmpty()) {
+        // Mostrar todas las multas
+        Object[][] todosLosDatos = listaMultas.obtenerDatosParaTabla();
+        actualizarTabla(todosLosDatos);
+        return;
     }
-    }//GEN-LAST:event_jButton5ActionPerformed
+    
+    // Asegúrate de pasar el JTextArea TextM
+    Object[][] resultados = listaMultas.buscarPorPlaca(placaBuscada, TextM);
+    
+    if (resultados.length == 0) {
+        JOptionPane.showMessageDialog(this, "No se encontraron multas para la placa: " + placaBuscada, "Sin Resultados", JOptionPane.INFORMATION_MESSAGE);
+    }
+    
+    // Actualizar la tabla con los resultados encontrados
+    actualizarTabla(resultados);
+    }//GEN-LAST:event_BuscadorActionPerformed
+
+    private void EliminadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminadorActionPerformed
+    String idText = Eliminar.getText().trim();
+    if (idText.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Por favor, ingrese un ID para eliminar.", "ID Vacío", JOptionPane.WARNING_MESSAGE);
+        return;
+    }
+    try {
+        int id = Integer.parseInt(idText);
+        // Llamar al método de eliminación y pasar el JTextArea
+        boolean eliminado = listaMultas.eliminarPorId(id, TextM);
+        if (eliminado) {
+            JOptionPane.showMessageDialog(this, "Multa eliminada con éxito.", "Eliminación Exitosa", JOptionPane.INFORMATION_MESSAGE);
+            actualizarTabla(); // Actualiza la tabla después de eliminar
+        } else {
+            JOptionPane.showMessageDialog(this, "No se encontró una multa con el ID: " + id, "ID No Encontrado", JOptionPane.WARNING_MESSAGE);
+        }
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Por favor, ingrese un ID válido.", "ID Inválido", JOptionPane.ERROR_MESSAGE);
+    }
+    }//GEN-LAST:event_EliminadorActionPerformed
+
+    private void CrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearActionPerformed
+Ingresar ingresarFrame = new Ingresar(Multas.this); // Pasar referencia al JFrame principal
+        ingresarFrame.setVisible(true);
+    }//GEN-LAST:event_CrearActionPerformed
+
+    private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
+    String idText = Modificar.getText().trim();
+               if (idText.isEmpty()) {
+                   JOptionPane.showMessageDialog(this, "Por favor, ingrese un ID para modificar.", "ID Vacío", JOptionPane.WARNING_MESSAGE);
+                   return;
+               }
+               try {
+                   int id = Integer.parseInt(idText);
+                   Multa multa = listaMultas.buscarMultaPorId(id); // Llama al método de la lista
+                   if (multa == null) {
+                       JOptionPane.showMessageDialog(this, "No se encontró una multa con el ID: " + id, "ID No Encontrado", JOptionPane.WARNING_MESSAGE);
+                       return;
+                   }
+                   // Abrir JFrame Ingresar en modo edición
+                   Ingresar ingresarFrame = new Ingresar(this, multa);
+                   ingresarFrame.setVisible(true);
+               } catch (NumberFormatException e) {
+                   JOptionPane.showMessageDialog(this, "Ingrese un ID válido.", "ID Inválido", JOptionPane.ERROR_MESSAGE);
+               }
+
+    }//GEN-LAST:event_btnModificarActionPerformed
+
+    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+        dispose();
+    }//GEN-LAST:event_SalirActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Multas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Multas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Multas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Multas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Multas().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton Buscador;
+    private javax.swing.JTextField Buscar;
+    private javax.swing.JButton CargaM;
+    private javax.swing.JButton Crear;
+    private javax.swing.JButton Eliminador;
+    private javax.swing.JTextField Eliminar;
+    private javax.swing.JTextField Modificar;
+    private javax.swing.JButton Salir;
+    private javax.swing.JTextArea TextM;
+    private javax.swing.JButton btnModificar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 }

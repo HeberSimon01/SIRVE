@@ -7,13 +7,49 @@
  *
  * @author User
  */
+// NodoAVL.java
 public class NodoAVL {
-    public Vehiculo vehiculo; // Objeto Vehiculo almacenado en el nodo
-    public NodoAVL izq, der; // Referencias a los nodos hijo izquierdo y derecho
-    public int altura; // Altura del nodo
-    // Constructor
+    Vehiculo vehiculo;
+    NodoAVL izquierda;
+    NodoAVL derecha;
+    int altura; // Height of the node
+
     public NodoAVL(Vehiculo vehiculo) {
         this.vehiculo = vehiculo;
-        this.altura = 1; // Nuevo nodo es inicialmente agregado a la hoja
+        this.izquierda = null;
+        this.derecha = null;
+        this.altura = 1; // New node is a leaf, height is 1
+    }
+
+    public Vehiculo getVehiculo() {
+        return vehiculo;
+    }
+
+    public void setVehiculo(Vehiculo vehiculo) {
+        this.vehiculo = vehiculo;
+    }
+
+    public NodoAVL getIzquierda() {
+        return izquierda;
+    }
+
+    public void setIzquierda(NodoAVL izquierda) {
+        this.izquierda = izquierda;
+    }
+
+    public NodoAVL getDerecha() {
+        return derecha;
+    }
+
+    public void setDerecha(NodoAVL derecha) {
+        this.derecha = derecha;
+    }
+
+    public int getAltura() {
+        return altura;
+    }
+
+    public void setAltura(int altura) {
+        this.altura = altura;
     }
 }
