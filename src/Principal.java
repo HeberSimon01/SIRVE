@@ -1021,15 +1021,18 @@ private String encriptar(String texto, int desplazamiento) {
         if (Character.isLetter(c)) {
             char base = Character.isLowerCase(c) ? 'a' : 'A';
             c = (char) ((c + desplazamiento - base) % 26 + base);
+        } else if (Character.isDigit(c)) {
+            c = (char) ((c - '0' + desplazamiento) % 10 + '0'); // Cifrar números
         }
         resultado.append(c);
     }
     return resultado.toString();
 }
 
-private String desencriptar(String texto, int desplazamiento) {
-    return encriptar(texto, 26 - desplazamiento); // Desplazamiento inverso
-}
+   private String desencriptar(String texto, int desplazamiento) {
+       return encriptar(texto, -desplazamiento); // Desplazamiento inverso
+   }
+
 private void mostrarDatosEnTabla1(List<Vehiculo> listaVehiculos) {
     // Limpiar todas las filas existentes en Tabla1
     DefaultTableModel tablaModelo1 = (DefaultTableModel) Tabla1.getModel();
@@ -1700,6 +1703,7 @@ Traspasos.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void EncriptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EncriptarActionPerformed
+                                        
         long startTime = System.nanoTime();
         for (int i = 0; i < tablaModelo.getRowCount(); i++) {
             for (int j = 1; j < tablaModelo.getColumnCount(); j++) { // Empezar desde 1 para evitar ID
@@ -1783,32 +1787,37 @@ Traspasos.setVisible(true);
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void DesencriptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DesencriptarActionPerformed
-    // Desencriptar Tabla1 (excepto columna ID)
-        long startTime = System.nanoTime();
-    // Desencriptar Tabla (excepto columna ID)
+                                            
+    long startTime = System.nanoTime();
+    
+    // Desencriptar en Tabla
     for (int i = 0; i < tablaModelo.getRowCount(); i++) {
         for (int j = 1; j < tablaModelo.getColumnCount(); j++) { // Empieza en 1 para evitar columna ID
             Object value = tablaModelo.getValueAt(i, j);
             if (value instanceof String) {
                 String encriptado = (String) value;
-                String original = desencriptar(encriptado, 3);
+                String original = desencriptar(encriptado, 3); // Llama a desencriptar con el desplazamiento
                 tablaModelo.setValueAt(original, i, j);
             }
         }
     }
+
+    // Desencriptar en Tabla1
     for (int i = 0; i < tablaModelo1.getRowCount(); i++) {
-        for (int j = 1; j < tablaModelo1.getColumnCount(); j++) {
+        for (int j = 1; j < tablaModelo1.getColumnCount(); j++) { // Empieza en 1 para evitar columna ID
             Object value = tablaModelo1.getValueAt(i, j);
             if (value instanceof String) {
                 String encriptado = (String) value;
-                String original = desencriptar(encriptado, 3);
+                String original = desencriptar(encriptado, 3); // Llama a desencriptar con el desplazamiento
                 tablaModelo1.setValueAt(original, i, j);
             }
         }
     }
+
     long endTime = System.nanoTime();
     double durationSeconds = (endTime - startTime) / 1_000_000_000.0;
     jTextAreaMensajes.append(String.format("Desencriptación completada en %.6f segundos.%n", durationSeconds));
+
     }//GEN-LAST:event_DesencriptarActionPerformed
 
     /**
